@@ -1,4 +1,4 @@
-checkbox
+AI-Lab
 ========
 
-The CheckBoX is an experimental multiplatform mobile app
+The AI laboratory is a repository for AI API evaluation.
