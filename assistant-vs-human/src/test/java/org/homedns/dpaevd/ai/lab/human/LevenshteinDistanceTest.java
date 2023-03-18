@@ -1,5 +1,6 @@
 package org.homedns.dpaevd.ai.lab.human;
 
+import org.homedns.dpaevd.ai.lab.algorithm.human.LevenshteinDistance;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

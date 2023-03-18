@@ -4,7 +4,7 @@
  * Copyright (c) 2023 by DPAEVD
  * All rights reserved
  */
-package org.homedns.dpaevd.ai.lab.human;
+package org.homedns.dpaevd.ai.lab.algorithm.human;
 
 import java.util.List;
 
