@@ -4,7 +4,7 @@
  * Copyright (c) 2023 by DPAEVD
  * All rights reserved
  */
-package org.homedns.dpaevd.ai.lab.economy.openai;
+package org.homedns.dpaevd.ai.lab.economy.currencies;
 
 import java.util.HashMap;
 

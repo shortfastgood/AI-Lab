@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640.06" height="320.29">
+    <defs>
+        <style>.cls-1{fill:#012169;}.cls-2{fill:#fff;}.cls-3{fill:#c8102e;}</style>
+    </defs>
+    <title>great_britain</title>
+    <rect class="cls-1" width="640" height="320"/>
+    <polygon class="cls-2" points="586.77 0.29 0.29 273.77 0.29 297 0.53 273.94 0.29 297 0.29 320.29 51.97 320.29 640.06 46.06 640.06 0.29 586.77 0.29"/>
+    <polygon class="cls-3" points="612.02 0.29 310.99 140.67 320 160 640.06 10.75 640.06 0.29 612.02 0.29"/><polygon class="cls-3" points="319.79 160.11 0.29 309.09 0.29 320.29 26.74 320.29 328.81 179.44 319.79 160.11"/>
+    <polygon class="cls-2" points="640 273.91 52.6 0 0.12 0 0.12 46.14 587.65 320.12 640 320.12 640 273.91"/>
+    <polygon class="cls-3" points="320 160.01 0.12 10.85 0.12 34.38 310.98 179.34 320 160.01"/>
+    <polygon class="cls-3" points="329.01 140.67 320 160 640 309.22 640 285.68 329.01 140.67"/>
+    <rect class="cls-2" x="266.67" width="106.67" height="320"/>
+    <rect class="cls-2" y="107" width="640" height="107"/>
+    <rect class="cls-3" y="128" width="640" height="64"/>
+    <rect class="cls-3" x="288" width="64" height="320"/>
+</svg>
