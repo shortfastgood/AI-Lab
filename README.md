@@ -6,8 +6,8 @@
 - [Digital Assistant](#digital-assistant)
   - [Links](#links)
   - [Economy](#economy)
-  - [Interest](#interest)
-  - [Loans](#loans)
+    - [Interest](#interest)
+    - [Loans](#loans)
   - [SVG to Image](#svg-to-image)
 
 ## Introduction
@@ -32,11 +32,11 @@ to get the greatest benefits.
 The economy, particularly the banking sector, can benefit from a system that can handle 
 large amounts of data and texts simultaneously.
 
-### Interest
+#### Interest
 
 - [Interactive Talk](emerging-functions/economy/interest/interest.md)
 
-### Loans
+#### Loans
 
 - [Interactive Talk](emerging-functions/economy/loan/loan.md)
 - [Programming](emerging-functions/economy/loan/loan_amortization.md)
