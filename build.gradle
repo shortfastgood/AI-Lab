@@ -1,0 +1,157 @@
+buildscript {
+    ext {
+        annotationApiVersion = '2.1.1'
+        antlrVersion = '4.3.4'
+        dependencyCheckPlugin = '8.1.0'
+        googleFirestoreVersion = '2.1.0'
+        ioVersion = '2.11.0'
+        jacksonVersion = '2.13.1'
+        jacocoVersion = '0.8.8'
+        junit4Version = '4.13.2'
+        jUnitVersion = '5.9.2'
+        jUnitPlatformVersion = '1.9.2'
+        laboratoryVersion = '2023.1.0'
+        langVersion = '3.12.0'
+        logbackVersion = '1.4.5'
+        servletApiVersion = '6.0.0'
+        slf4jVersion = '2.0.5'
+        springVersion = '6.0.6'
+        springBootVersion = '3.0.4'
+        springDependenciesVersion = '1.1.0'
+        validationApiVersion = '3.0.2'
+
+        snippetsDir = file('build/generated-snippets')
+
+        // unpublishedLibDir = "C:\\Users\\Daniele\\Google Drive\\tecnica e sviluppo\\java\\repository"
+        unpublishedLibDir = "/Users/dden/Documents/sviluppo/java/repository"
+    }
+    repositories {
+        mavenCentral()
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+        mavenLocal()
+    }
+    dependencies {
+        classpath("com.google.cloud.tools:appengine-gradle-plugin:2.4.1",
+                "org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}",
+                "io.spring.dependency-management:io.spring.dependency-management.gradle.plugin:${springDependenciesVersion}",
+                "org.owasp:dependency-check-gradle:${dependencyCheckPlugin}")
+    }
+}
+
+plugins {
+    id 'java'
+    id 'java-library'
+    id 'maven-publish'
+    id 'jacoco'
+    id 'eclipse'
+    id 'idea'
+    id 'org.hibernate.orm' version '6.1.6.Final'
+}
+
+group = 'org.homedns.dpaevd'
+version = '2023.1'
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+}
+
+allprojects {
+    apply plugin: 'eclipse'
+    apply plugin: 'idea'
+
+    group = 'org.homedns.dpaevd'
+    version = '2023.1.0'
+}
+
+
+subprojects {
+    apply plugin: 'java'
+    apply plugin: 'java-library'
+    apply plugin: 'maven-publish'
+    apply plugin: "jacoco"
+    apply plugin: 'io.spring.dependency-management'
+    apply plugin: "org.owasp.dependencycheck"
+
+    sourceSets {
+        generated
+    }
+    sourceSets.generated.java.srcDirs = ['src/main/generated']
+
+    compileJava {
+        options.encoding = 'UTF-8'
+        options.compilerArgs << '-Xlint:deprecation'
+
+        sourceCompatibility = '17'
+        targetCompatibility = '17'
+    }
+
+    configurations {
+        testAgent {
+            transitive = false
+        }
+    }
+
+    repositories {
+        mavenCentral()
+        mavenLocal()
+    }
+
+    dependencies {
+        implementation("org.apache.commons:commons-lang3:${langVersion}",
+                "commons-io:commons-io:${ioVersion}",
+                "org.slf4j:slf4j-api:${slf4jVersion}")
+        testAgent("org.jacoco:org.jacoco.agent:${jacocoVersion}:runtime")
+        testImplementation("junit:junit:${junit4Version}",
+                    "org.junit.jupiter:junit-jupiter-api:${jUnitVersion}",
+                    "org.junit.jupiter:junit-jupiter-params:${jUnitVersion}",
+                    "org.springframework:spring-test:${springVersion}")
+        testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${jUnitVersion}",
+                    "org.junit.vintage:junit-vintage-engine:${jUnitVersion}",
+                    "org.junit.platform:junit-platform-launcher:${jUnitPlatformVersion}",
+                    "org.junit.platform:junit-platform-commons:${jUnitPlatformVersion}",
+                    "org.junit.platform:junit-platform-runner:${jUnitPlatformVersion}")
+    }
+
+    jacoco {
+        toolVersion = jacocoVersion
+    }
+
+    jacocoTestReport {
+        group = "Reporting"
+        reports {
+            xml {
+                enabled true
+            }
+            xml.destination file("${buildDir}/jacoco/report.xml")
+            html {
+                enabled true
+            }
+            html.destination file("${buildDir}/reports/coverage")
+        }
+    }
+
+    jar {
+        manifest {
+            attributes('Implementation-Title': project.name,
+                       'Implementation-Version': project.version)
+        }
+    }
+
+    tasks.withType(JavaExec).configureEach {
+        if (it.name == 'junitPlatformTest') {
+            doFirst {
+                jvmArgs "-javaagent:${configurations.testAgent.singleFile}=destfile=${project.buildDir.name}/jacoco/test.exec"
+            }
+        }
+    }
+
+    tasks.register('allDeps', DependencyReportTask) {}
+
+    test {
+        useJUnitPlatform()
+    }
+}
+
