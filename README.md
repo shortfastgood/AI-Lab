@@ -27,6 +27,11 @@ to get the greatest benefits.
 - [Copilot (GitHub)](https://copilot.github.com/)
 - [Playground (OpenAI API)](https://platform.openai.com/playground)
 
+### Interactive Programming
+
+In interactive programming, the human outlines what needs to be programmed in a form of technical specification 
+made up of commands, and the artificial intelligence generates the code in the required language.
+
 ### Economy
 
 The economy, particularly the banking sector, can benefit from a system that can handle 
