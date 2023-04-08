@@ -1,0 +1,293 @@
+
+/* CSS3 Spinners
+-------------------------------------------------- */
+
+.css3-spinner {
+}
+
+/* position the bars and balls correctly (rotate them and translate them outward)*/
+.css3-spinner-bar1 {
+  -moz-transform:rotate(0deg) translate(0, -40px);
+  -ms-transform:rotate(0deg) translate(0, -40px);
+  -webkit-transform:rotate(0deg) translate(0, -40px);
+  transform:rotate(0deg) translate(0, -40px);
+  opacity:0.12;
+}
+.css3-spinner-bar2 {
+  -moz-transform:rotate(45deg) translate(0, -40px);
+  -ms-transform:rotate(45deg) translate(0, -40px);
+  -webkit-transform:rotate(45deg) translate(0, -40px);
+  transform:rotate(45deg) translate(0, -40px);
+  opacity:0.25;
+}
+.css3-spinner-bar3 {
+  -moz-transform:rotate(90deg) translate(0, -40px);
+  -ms-transform:rotate(90deg) translate(0, -40px);
+  -webkit-transform:rotate(90deg) translate(0, -40px);
+  transform:rotate(90deg) translate(0, -40px);
+  opacity:0.37;
+}
+.css3-spinner-bar4 {
+  -moz-transform:rotate(135deg) translate(0, -40px);
+  -ms-transform:rotate(135deg) translate(0, -40px);
+  -webkit-transform:rotate(135deg) translate(0, -40px);
+  transform:rotate(135deg) translate(0, -40px);
+  opacity:0.50;
+}
+.css3-spinner-bar5 {
+  -moz-transform:rotate(180deg) translate(0, -40px);
+  -ms-transform:rotate(180deg) translate(0, -40px);
+  -webkit-transform:rotate(180deg) translate(0, -40px);
+  transform:rotate(180deg) translate(0, -40px);
+  opacity:0.62;
+}
+.css3-spinner-bar6 {
+  -moz-transform:rotate(225deg) translate(0, -40px);
+  -ms-transform:rotate(225deg) translate(0, -40px);
+  -webkit-transform:rotate(225deg) translate(0, -40px);
+  transform:rotate(225deg) translate(0, -40px);
+  opacity:0.75;
+}
+.css3-spinner-bar7 {
+  -moz-transform:rotate(270deg) translate(0, -40px);
+  -ms-transform:rotate(270deg) translate(0, -40px);
+  -webkit-transform:rotate(270deg) translate(0, -40px);
+  transform:rotate(270deg) translate(0, -40px);
+  opacity:0.87;
+}
+.css3-spinner-bar8 {
+  -moz-transform:rotate(315deg) translate(0, -40px);
+  -ms-transform:rotate(315deg) translate(0, -40px);
+  -webkit-transform:rotate(315deg) translate(0, -40px);
+  transform:rotate(315deg) translate(0, -40px);
+  opacity:1;
+}
+
+/* set up the three bar spinners */
+.css3-spinner-classic, .css3-spinner-rounded, .css3-spinner-partial {
+  border-collapse: separate;
+  display: table;
+  padding: 0;
+  position:relative;
+  width:100px;
+  height:100px;
+  margin:-25px;
+  -moz-transform:scale(0.5);
+  -ms-transform:scale(0.5);
+  -webkit-transform:scale(0.5);
+  transform:scale(0.5);
+
+  -ms-animation-name: rotateClassic;
+  -ms-animation-duration:1s;
+  -ms-animation-iteration-count:infinite;
+  -ms-animation-timing-function:linear;
+
+  -webkit-animation-name: rotateClassic;
+  -webkit-animation-duration:1s;
+  -webkit-animation-iteration-count:infinite;
+  -webkit-animation-timing-function:linear;
+
+  animation-name: rotateClassic;
+  animation-duration:1s;
+  animation-iteration-count:infinite;
+  animation-timing-function:linear;
+}
+.css3-spinner-classic div,
+.css3-spinner-rounded div,
+.css3-spinner-partial div {
+  width:10px;
+  height:30px;
+  background:#000;
+  position:absolute;
+  top:35px;
+  left:45px;
+}
+
+/* shadows for the first spinner */
+.css3-spinner-classic div {
+  box-shadow:black 0 0 4px;
+}
+  /* rounded outer corners for the second */
+.css3-spinner-rounded div {
+  border-radius-topleft:10px;
+  border-radius-topright:10px;
+}
+
+/* full rounded corners and partially hidden for the third */
+.css3-spinner-partial div {
+  border-radius:20px;
+}
+.css3-spinner-partial .css3-spinner-bar1,
+.css3-spinner-partial .css3-spinner-bar2,
+.css3-spinner-partial .css3-spinner-bar3 {opacity:0;}
+
+
+/* set up the three ball spinners */
+.css3-spinner-balls, .css3-spinner-balls-increase, .css3-spinner-balls-partial {
+  border-collapse: separate;
+  display: table;
+  padding: 0;
+  width:100px;
+  height:100px;
+  margin:-25px;
+  -moz-border-radius:100px;
+  -webkit-border-radius:100px;
+  border-radius:100px;
+
+  -moz-transform:scale(0.5);
+  -ms-transform:scale(0.5);
+  -webkit-transform:scale(0.5);
+  transform:scale(0.5);
+
+  -ms-animation-name: rotateClassic;
+  -ms-animation-duration:1s;
+  -ms-animation-iteration-count:infinite;
+  -ms-animation-timing-function:linear;
+
+  -webkit-animation-name: rotateClassic;
+  -webkit-animation-duration:1s;
+  -webkit-animation-iteration-count:infinite;
+  -webkit-animation-timing-function:linear;
+
+  animation-name: rotateClassic;
+  animation-duration:1s;
+  animation-iteration-count:infinite;
+  animation-timing-function:linear;
+}
+.css3-spinner-balls div,
+.css3-spinner-balls-increase div,
+.css3-spinner-balls-partial div {
+  width:20px;
+  height:20px;
+  background:#000;
+  border-radius:40px;
+  -moz-border-radius:40px;
+  -webkit-border-radius:40px;
+  position:absolute;
+  left:40px;
+  top:40px;
+}
+/* add a shadow to the first */
+.css3-spinner-balls div {
+  -moz-box-shadow:black 0 0 4px;
+  -webkit-box-shadow:black 0 0 4px;
+  box-shadow:black 0 0 4px;
+}
+
+/* increase the balls in size */
+.css3-spinner-balls-increase .css3-spinner-bar1 {
+  -moz-transform:rotate(0deg)   translate(0, -40px) scale(0.1);
+  -ms-transform:rotate(0deg)   translate(0, -40px) scale(0.1);
+  -webkit-transform:rotate(0deg)   translate(0, -40px) scale(0.1);opacity:0.12;
+  transform:rotate(0deg)   translate(0, -40px) scale(0.1);
+}
+.css3-spinner-balls-increase .css3-spinner-bar2 {
+  -moz-transform:rotate(45deg)  translate(0, -40px) scale(0.2);
+  -ms-transform:rotate(45deg)  translate(0, -40px) scale(0.2);
+  -webkit-transform:rotate(45deg)  translate(0, -40px) scale(0.2);opacity:0.25;
+  transform:rotate(45deg)  translate(0, -40px) scale(0.2);
+}
+.css3-spinner-balls-increase .css3-spinner-bar3 {
+  -moz-transform:rotate(90deg)  translate(0, -40px) scale(0.4);
+  -ms-transform:rotate(90deg)  translate(0, -40px) scale(0.4);
+  -webkit-transform:rotate(90deg)  translate(0, -40px) scale(0.4);opacity:0.37;
+  transform:rotate(90deg)  translate(0, -40px) scale(0.4);
+}
+.css3-spinner-balls-increase .css3-spinner-bar4 {
+  -moz-transform:rotate(135deg) translate(0, -40px) scale(0.6);
+  -ms-transform:rotate(135deg) translate(0, -40px) scale(0.6);
+  -webkit-transform:rotate(135deg) translate(0, -40px) scale(0.6);opacity:0.50;
+  transform:rotate(135deg) translate(0, -40px) scale(0.6);
+}
+.css3-spinner-balls-increase .css3-spinner-bar5 {
+  -moz-transform:rotate(180deg) translate(0, -40px) scale(0.8);
+  -ms-transform:rotate(180deg) translate(0, -40px) scale(0.8);
+  -webkit-transform:rotate(180deg) translate(0, -40px) scale(0.8);opacity:0.62;
+  transform:rotate(180deg) translate(0, -40px) scale(0.8);
+}
+.css3-spinner-balls-increase .css3-spinner-bar6 {
+  -moz-transform:rotate(225deg) translate(0, -40px) scale(1);
+  -ms-transform:rotate(225deg) translate(0, -40px) scale(1);
+  -webkit-transform:rotate(225deg) translate(0, -40px) scale(1);opacity:0.75;
+  transform:rotate(225deg) translate(0, -40px) scale(1);
+}
+.css3-spinner-balls-increase .css3-spinner-bar7 {
+  -moz-transform:rotate(270deg) translate(0, -40px) scale(1.2);
+  -ms-transform:rotate(270deg) translate(0, -40px) scale(1.2);
+  -webkit-transform:rotate(270deg) translate(0, -40px) scale(1.2);opacity:0.87;
+  transform:rotate(270deg) translate(0, -40px) scale(1.2);
+}
+.css3-spinner-balls-increase .css3-spinner-bar8 {
+  -moz-transform:rotate(315deg) translate(0, -40px) scale(1.4);
+  -ms-transform:rotate(315deg) translate(0, -40px) scale(1.4);
+  -webkit-transform:rotate(315deg) translate(0, -40px) scale(1.4);opacity:1;
+  transform:rotate(315deg) translate(0, -40px) scale(1.4);
+}
+
+/* hide the last halve */
+.css3-spinner-balls-partial .css3-spinner-bar1 ,
+.css3-spinner-balls-partial .css3-spinner-bar2,
+.css3-spinner-balls-partial .css3-spinner-bar3 {
+  opacity:0;
+}
+
+@-ms-keyframes rotateClassic {
+    0% {-ms-transform:scale(0.5) rotate(0deg);}
+   12.5% {-ms-transform:scale(0.5) rotate(0deg);}
+   12.51% {-ms-transform:scale(0.5) rotate(45deg);}
+   25% {-ms-transform:scale(0.5) rotate(45deg);}
+   25.01% {-ms-transform:scale(0.5) rotate(90deg);}
+   37.5% {-ms-transform:scale(0.5) rotate(90deg);}
+   37.51% {-ms-transform:scale(0.5) rotate(135deg);}
+   50% {-ms-transform:scale(0.5) rotate(135deg);}
+   50.01% {-ms-transform:scale(0.5) rotate(180deg);}
+   62.5% {-ms-transform:scale(0.5) rotate(180deg);}
+   62.51% {-ms-transform:scale(0.5) rotate(225deg);}
+   75% {-ms-transform:scale(0.5) rotate(225deg);}
+   75.01% {-ms-transform:scale(0.5) rotate(270deg);}
+   87.5% {-ms-transform:scale(0.5) rotate(270deg);}
+   87.51% {-ms-transform:scale(0.5) rotate(315deg);}
+  100% {-ms-transform:scale(0.5) rotate(315deg);}
+}
+
+@-webkit-keyframes rotateClassic {
+    0% {-webkit-transform:scale(0.5) rotate(0deg);}
+   12.5% {-webkit-transform:scale(0.5) rotate(0deg);}
+   12.51% {-webkit-transform:scale(0.5) rotate(45deg);}
+   25% {-webkit-transform:scale(0.5) rotate(45deg);}
+   25.01% {-webkit-transform:scale(0.5) rotate(90deg);}
+   37.5% {-webkit-transform:scale(0.5) rotate(90deg);}
+   37.51% {-webkit-transform:scale(0.5) rotate(135deg);}
+   50% {-webkit-transform:scale(0.5) rotate(135deg);}
+   50.01% {-webkit-transform:scale(0.5) rotate(180deg);}
+   62.5% {-webkit-transform:scale(0.5) rotate(180deg);}
+   62.51% {-webkit-transform:scale(0.5) rotate(225deg);}
+   75% {-webkit-transform:scale(0.5) rotate(225deg);}
+   75.01% {-webkit-transform:scale(0.5) rotate(270deg);}
+   87.5% {-webkit-transform:scale(0.5) rotate(270deg);}
+   87.51% {-webkit-transform:scale(0.5) rotate(315deg);}
+  100% {-webkit-transform:scale(0.5) rotate(315deg);}
+}
+
+@keyframes rotateClassic {
+    0% {transform:scale(0.5) rotate(0deg);}
+   12.5% {transform:scale(0.5) rotate(0deg);}
+   12.51% {transform:scale(0.5) rotate(45deg);}
+   25% {transform:scale(0.5) rotate(45deg);}
+   25.01% {transform:scale(0.5) rotate(90deg);}
+   37.5% {transform:scale(0.5) rotate(90deg);}
+   37.51% {transform:scale(0.5) rotate(135deg);}
+   50% {transform:scale(0.5) rotate(135deg);}
+   50.01% {transform:scale(0.5) rotate(180deg);}
+   62.5% {transform:scale(0.5) rotate(180deg);}
+   62.51% {transform:scale(0.5) rotate(225deg);}
+   75% {transform:scale(0.5) rotate(225deg);}
+   75.01% {transform:scale(0.5) rotate(270deg);}
+   87.5% {transform:scale(0.5) rotate(270deg);}
+   87.51% {transform:scale(0.5) rotate(315deg);}
+  100% {transform:scale(0.5) rotate(315deg);}
+}
+
+.css3-spinner-extra-space-left {
+  margin-right: 10px;
+}
