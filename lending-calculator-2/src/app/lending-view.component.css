@@ -1,0 +1,213 @@
+.bs-button-sep {
+    padding-top: 10px;
+  }
+  
+  /*
+   * Examples
+   *
+   * Isolated sections of example content for each component or feature. Usually
+   * followed by a code snippet.
+   */
+  
+  .bs-example {
+    position: relative;
+    padding: 45px 15px 15px;
+    margin: 0 -15px 15px;
+    border-color: #e5e5e5 #eee #eee;
+    border-style: solid;
+    border-width: 1px 0;
+    -webkit-box-shadow: inset 0 3px 6px rgba(0,0,0,.05);
+            box-shadow: inset 0 3px 6px rgba(0,0,0,.05);
+  }
+  
+  .bs-example-alert {
+    height: 110px;
+    overflow-y: hidden;
+  }
+  
+  /* Echo out a label for the example */
+  .bs-example:after {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #959595;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    content: "Example";
+  }
+  
+  .bs-example-padded-bottom {
+    padding-bottom: 24px;
+  }
+  
+  /* Tweak display of the code snippets when following an example */
+  .bs-example + .highlight,
+  .bs-example + .zero-clipboard + .highlight {
+    margin: -15px -15px 15px;
+    border-width: 0 0 1px;
+    border-radius: 0;
+  }
+  
+  /* Make the examples and snippets not full-width */
+  @media (min-width: 768px) {
+    .bs-example {
+      margin-right: 0;
+      margin-left: 0;
+      background-color: #fff;
+      border-color: #ddd;
+      border-width: 1px;
+      border-radius: 4px 4px 0 0;
+      -webkit-box-shadow: none;
+              box-shadow: none;
+    }
+    .bs-example + .highlight,
+    .bs-example + .zero-clipboard + .highlight {
+      margin-top: -16px;
+      margin-right: 0;
+      margin-left: 0;
+      border-width: 1px;
+      border-bottom-right-radius: 4px;
+      border-bottom-left-radius: 4px;
+    }
+    .bs-example-standalone {
+      border-radius: 4px;
+    }
+  }
+  
+  /* Undo width of container */
+  .bs-example .container {
+    width: auto;
+  }
+  
+  /* Tweak content of examples for optimum awesome */
+  .bs-example > p:last-child,
+  .bs-example > ul:last-child,
+  .bs-example > ol:last-child,
+  .bs-example > blockquote:last-child,
+  .bs-example > .form-control:last-child,
+  .bs-example > .table:last-child,
+  .bs-example > .navbar:last-child,
+  .bs-example > .jumbotron:last-child,
+  .bs-example > .alert:last-child,
+  .bs-example > .panel:last-child,
+  .bs-example > .list-group:last-child,
+  .bs-example > .well:last-child,
+  .bs-example > .progress:last-child,
+  .bs-example > .table-responsive:last-child > .table {
+    margin-bottom: 0;
+  }
+  .bs-example > p > .close {
+    float: none;
+  }
+  
+  .bs-example-checkbox,
+  .bs-example-toolbar {
+    margin-top: 5px;
+  }
+  /*
+   * Results
+   *
+   * Isolated sections of result content for each component or feature. Usually
+   * followed by a code snippet.
+   */
+  
+  .bs-result {
+    position: relative;
+    padding: 45px 15px 15px;
+    margin: 0 -15px 15px;
+    border-color: #e5e5e5 #eee #eee;
+    border-style: solid;
+    border-width: 1px 0;
+    -webkit-box-shadow: inset 0 3px 6px rgba(0,0,0,.05);
+            box-shadow: inset 0 3px 6px rgba(0,0,0,.05);
+  }
+  
+  .bs-result-alert {
+    height: 110px;
+    overflow-y: hidden;
+  }
+  
+  /* Echo out a label for the example */
+  .bs-result:after {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #959595;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    content: "Result";
+  }
+  
+  .bs-result-padded-bottom {
+    padding-bottom: 24px;
+  }
+  
+  /* Tweak display of the code snippets when following an example */
+  .bs-result + .highlight,
+  .bs-result + .zero-clipboard + .highlight {
+    margin: -15px -15px 15px;
+    border-width: 0 0 1px;
+    border-radius: 0;
+  }
+  
+  /* Make the examples and snippets not full-width */
+  @media (min-width: 768px) {
+    .bs-result {
+      margin-right: 0;
+      margin-left: 0;
+      background-color: #fff;
+      border-color: #ddd;
+      border-width: 1px;
+      border-radius: 4px 4px 0 0;
+      -webkit-box-shadow: none;
+              box-shadow: none;
+    }
+    .bs-result + .highlight,
+    .bs-result + .zero-clipboard + .highlight {
+      margin-top: -16px;
+      margin-right: 0;
+      margin-left: 0;
+      border-width: 1px;
+      border-bottom-right-radius: 4px;
+      border-bottom-left-radius: 4px;
+    }
+    .bs-result-standalone {
+      border-radius: 4px;
+    }
+  }
+  
+  /* Undo width of container */
+  .bs-result .container {
+    width: auto;
+  }
+  
+  /* Tweak content of examples for optimum awesome */
+  .bs-result > p:last-child,
+  .bs-result > ul:last-child,
+  .bs-result > ol:last-child,
+  .bs-result > blockquote:last-child,
+  .bs-result > .form-control:last-child,
+  .bs-result > .table:last-child,
+  .bs-result > .navbar:last-child,
+  .bs-result > .jumbotron:last-child,
+  .bs-result > .alert:last-child,
+  .bs-result > .panel:last-child,
+  .bs-result > .list-group:last-child,
+  .bs-result > .well:last-child,
+  .bs-result > .progress:last-child,
+  .bs-result > .table-responsive:last-child > .table {
+    margin-bottom: 0;
+  }
+  .bs-result > p > .close {
+    float: none;
+  }
+  
+  .bs-result-checkbox,
+  .bs-result-toolbar {
+    margin-top: 5px;
+  }
+  

@@ -1,0 +1,106 @@
+<div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <div class="list-group">
+          <ng-template ngFor let-item [ngForOf]="allCalculatorItems" let-i="index" [ngForTrackBy]="trackByFn">
+            <button type="button" class="list-group-item" (click)="switchTo(i)">{{item.title}}
+              <div *ngIf="item.isPending" style="-ms-transform: scale(0.5); -webkit-transform: scale(0.5); transform: scale(0.5); position: absolute; top: -10px; right: -10px;">
+                <css3-spinner></css3-spinner>
+              </div>
+            </button>
+          </ng-template>
+        </div>
+      </div>
+      <div class="col-md-9">
+        <div class="bs-example">
+          <div *ngIf="currentItem.isPending" style="position: absolute; top: 10px; right: 10px;">
+            <css3-spinner></css3-spinner>
+          </div>
+          <h2>{{currentItem.title}}</h2>
+          <p class="lead">{{currentItem.description}}</p>
+          <form #appHome="ngForm">
+            <label for="amount">amount</label>
+            <div class="input-group">
+              <span class="input-group-addon">&pound;</span>
+              <input style="text-align: right;" type="text" class="form-control" id="amount" name="amount" [(ngModel)]="currentItem.amount">
+              <span class="input-group-addon">.00</span>
+            </div>
+            <div>&nbsp;</div>
+            <label for="fee">fee</label>
+            <div class="input-group">
+              <input style="text-align: right;" type="text" class="form-control" id="fee" name="fee" [(ngModel)]="currentItem.fee">
+              <span class="input-group-addon">%</span>
+            </div>
+            <div>&nbsp;</div>
+            <label for="rate">rate</label>
+            <div class="input-group">
+              <input style="text-align: right;" type="text" class="form-control" id="rate" name="rate" [(ngModel)]="currentItem.rate">
+              <span class="input-group-addon">%</span>
+            </div>
+            <div>&nbsp;</div>
+            <label for="period">period</label>
+            <div class="input-group">
+              <input style="text-align: right;" type="text" class="form-control" id="period" name="period" [(ngModel)]="currentItem.period">
+              <span class="input-group-addon">years</span>
+            </div>
+            <div>&nbsp;</div>
+            <label for="frequency">compunding frequency</label>
+            <div class="input-group">
+              <input style="text-align: right;" type="text" class="form-control" id="frequency" name="frequency" [(ngModel)]="currentItem.frequency">
+              <span class="input-group-addon">no</span>
+            </div>
+            <div>&nbsp;</div>
+            <div class="row">
+              <div class="col-md-2 bs-button-sep"><button type="button" class="btn btn-default" (click)="calculate(0)">calculate<br>offline</button></div>
+              <div class="col-md-2 bs-button-sep"><button type="button" class="btn btn-default" (click)="calculate(2000)">calculate<br>online</button></div>
+              <div class="col-md-2 bs-button-sep"><button type="button" class="btn btn-success" (click)="calculate(20000)">20s delay</button></div>
+              <div class="col-md-2 bs-button-sep"><button type="button" class="btn btn-info" (click)="calculate(40000)">40s delay</button></div>
+              <div class="col-md-2 bs-button-sep"><button type="button" class="btn btn-warning" (click)="calculate(60000)">60s delay</button></div>
+              <div class="col-md-2 bs-button-sep"><button type="button" class="btn btn-danger" (click)="calculate(120000)">120s delay</button></div>
+              <div class="col-md-2 bs-button-sep"></div>
+            </div>
+          </form>
+        </div>
+        <div *ngIf="currentItem.isCalculated == true && currentItem.isPending == false" class="bs-result">
+          <h4>Monthly Payments</h4>
+          <p>Monthly payment: {{currentItem.result.monthlyPayment}} &pound;</p>
+          <p>Effective interest rate:  N/A %</p>
+          <p>&nbsp;</p>
+  
+          <h4>Lending Totals</h4>
+          <p>Principal: {{currentItem.result.principal}} &pound; </p>
+          <p>Total interest paid: {{currentItem.result.interest}} &pound;</p>
+          <p>Total fees paid: {{currentItem.result.fees}} &pound;</p>
+          <p>Total payments: {{currentItem.result.payments}} &pound;</p>
+          <p>&nbsp;</p>
+  
+          <h4>Payments Table</h4>
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>months</th>
+                <th>monthly payment</th>
+                <th>ending balance</th>
+                <th>principal paid</th>
+                <th>interest paid</th>
+                <th>fee paid</th>
+              </tr>
+            </thead>
+            <tbody>
+              <ng-template ngFor let-item [ngForOf]="currentItem.result.yearPayments" let-i="index" [ngForTrackBy]="trackByFn">
+                <tr>
+                  <th style="text-align: right;">{{item.months}}</th>
+                  <td style="text-align: right;">{{item.monthlyPayment}}</td>
+                  <td style="text-align: right;">{{item.endingBalance}}</td>
+                  <td style="text-align: right;">{{item.principalPaid}}</td>
+                  <td style="text-align: right;">{{item.interestPaid}}</td>
+                  <td style="text-align: right;">{{item.feePaid}}</td>
+                </tr>
+              </ng-template>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  
