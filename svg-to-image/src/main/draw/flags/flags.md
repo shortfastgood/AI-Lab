@@ -11,7 +11,7 @@
 **CHAT**: *The national flag of Germany has proportions of 3:5. This means that the length of the flag is 1.67 times its height. The flag consists of three equal 
 horizontal bands with the colors black, red, and gold from top to bottom.*
 
-**HUMAN**: *Generate an SVG file containing a rectangle with a height of 320 and a width of 640, divided into three equal horizontal 
+**HUMAN**: *Generate an SVG file containing a rectangle with a height of 360 and a width of 600, divided into three equal horizontal 
 bands of black, red, and gold from top to bottom.*
 
 **CHAT**:

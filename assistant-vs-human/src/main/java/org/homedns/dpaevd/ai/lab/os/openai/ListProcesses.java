@@ -29,7 +29,6 @@ import java.util.Set;
  * <p>Generate by ChatGPT-4 using the commands:</p>
  * <ol>
  *     <li>"<em>How to list all live processes in the operating system using a java program ?</em>"</li>
- *
  *     <li>"<em>Add the static class ProcessInfo having the final properties pid (long), command (String) and arguments (String[]) to ListProcesses. Generate also getters and setters.</em>"</li>
  *     <li>"<em>Add the static method getProcesses returning a list of ProcessInfos containing all processes.</em>"</li>
  *     <li>"<em>Add the static void method buildProcessTree taking the parameters parent (ProcessHandle) and level (int).

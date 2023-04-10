@@ -1,0 +1,6 @@
+<svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
+    <!-- This is the french national flag -->
+    <rect x="0" y="0" width="200" height="400" fill="#0055A4" />
+    <rect x="200" y="0" width="200" height="400" fill="#FFFFFF" />
+    <rect x="400" y="0" width="200" height="400" fill="#EF4135" />
+</svg>
