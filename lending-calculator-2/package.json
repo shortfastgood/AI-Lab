@@ -12,7 +12,9 @@
     "mac-build": "ng build --base-href ./ && cp src/electron.js dist/lending-calculator-2",
     "mac-electron": "npm run mac-build && electron dist/lending-calculator-2/electron.js",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "win-build": "ng build --base-href ./ && copy src\\electron.js dist\\lending-calculator-2",
+    "win-electron": "npm run win-build && electron dist\\lending-calculator-2\\electron.js"
   },
   "private": true,
   "dependencies": {
