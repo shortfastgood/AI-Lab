@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720">
+    <!-- define the sunsetSky gradient from the color of the sky at sunset to the color of the desert, top down. -->
+    <!-- define the sunsetDesert gradient from the color of the desert to brown, top down. -->
+    <!-- define the cactusGradient gradient from light green to dark green, left to right. -->
+
+    <!-- rectangle 1200,360 filled with sunsetSky gradient -->
+    <!-- rectangle 1200,360 filled with the sunsetDesert gradient. -->
+    <!-- circle 100,100 with center in 1000,260 filled with the color of the sun. -->
+
+    <!-- polygon section 300,360 320,360 960,720 360,720 filled in black.-->
+    <!-- dotted white line 308,360 660,720 width 5, dash 5,5. -->
+    <!-- white line 303,360 365,720 width 3. -->
+    <!-- white line 317,360 957,720 width 3. -->
+
+    <g transform="scale(0.5), translate(150,150)">
+        <!-- bird left wing using arc endpoint 100,100 -->
+        <!-- bird right wing using arc endpoint in 200,100 -->
+    </g>
+
+    <g transform="translate(90,450) scale(0.5), ">
+        <!-- elipse 50,20 40,20 fill with cactusGradient -->
+        <!-- rectangle 10,20 80,300 fill with cactusGradient -->
+        <!-- ellipse 50,320 40,20 fill with cactusGradient -->
+    </g>
+    <g transform="translate(100,520) rotate(-90,25,10) scale(0.4)">
+        <!-- elipse 50,20 40,20 fill with cactusGradient -->
+        <!-- rectangle 10,20 80,150 fill with cactusGradient -->
+        <!-- ellipse 50,170 40,20 fill with cactusGradient -->
+    </g>
+    <g transform="translate(155,455) scale(0.4)">
+        <!-- elipse 50,20 40,20 fill with cactusGradient -->
+        <!-- rectangle 10,20 80,150 fill with cactusGradient -->
+        <!-- ellipse 50,170 40,20 fill with cactusGradient -->
+    </g>
+</svg>

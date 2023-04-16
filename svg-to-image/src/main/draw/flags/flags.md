@@ -41,131 +41,87 @@ Thus, the human operator has to step in and make the appropriate corrections.
 
 #### Draw the rectangle
 
-**HUMAN**: Generate an SVG code that draws a blue rectangle with a width of 600 and a height of 360, with the color being RGB 003371.
+**HUMAN**: Generate an SVG code that draws a blue rectangle 1200x720, with the color being RGB 003371. Please add the namespace declaration.
 
 **CHAT**:
 
-    `<svg xmlns="http://www.w3.org/2000/svg" width="640" height="320">
-        <rect width="640" height="320" fill="#003371" />
-    </svg>`
+    `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720">
+       <rect x="0" y="0" width="1200" height="720" fill="#003371" />
+     </svg>`
 
 #### Draw the St. Andrews Cross
 
-**HUMAN**: Using the previously generated code:
-Add a white line that goes from the top left vertex to the bottom right vertex. 
-The line has a width of 1/5 the height of the rectangle. 
-Also, add a white line that goes from the bottom left vertex to the top right vertex. 
-The line has a width of 1/5 the height of the rectangle.
+**HUMAN**: Using the previously generated code: add a white line that goes from the top left vertex to the bottom right vertex. The line has a width of 1/5 the height of the rectangle. Also, add a white line that goes from the bottom left vertex to the top right vertex. The line has a width of 1/5 the height of the rectangle.
 
 **CHAT**:
 
-    `<svg xmlns="http://www.w3.org/2000/svg" width="640" height="320">
-        <rect width="640" height="320" fill="#003371" />
-        <line x1="0" y1="0" x2="640" y2="320" stroke="white" stroke-width="64" />
-        <line x1="0" y1="320" x2="640" y2="0" stroke="white" stroke-width="64" />
-    </svg>`
+    `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720">
+       <rect x="0" y="0" width="1200" height="720" fill="#003371" />
+       <line x1="0" y1="0" x2="1200" y2="720" stroke="#FFFFFF" stroke-width="144" />
+       <line x1="0" y1="720" x2="1200" y2="0" stroke="#FFFFFF" stroke-width="144" />
+     </svg>`
 
 #### Draw the St. Patrick's Cross
 
-**HUMAN**: 
-Using the previous generated code:
-- Add a new line at the end, staring at the upper left corner and ending in the middle, 
-  the line color is CE1126, the width of the line is 1/15 of the height of the rectangle. 
-- Move the stating point of the last line -1/20 of the rectangle width to the left. 
-- Move the starting point of the last line -1/20 of the rectangle height to the top.
-- Transform the last line translating it 1/15 of the rectangle height horizontally to the left.
-
+**HUMAN**: Using the previously generated code, add a line, at the end, from the top left vertex to the middle. The line has a width of 1/15 of the height of the rectangle. Translate the line 1/40 of the height of the rectangle to the left and 1/40 of the height of the rectangle to the bottom. The line color is #CE1126.
 **CHAT**:
 
-    `<svg width="640" height="320">
-        <rect width="640" height="320" fill="#003371" />
-        <line x1="0" y1="0" x2="640" y2="320" stroke="white" stroke-width="64" />
-        <line x1="0" y1="320" x2="640" y2="0" stroke="white" stroke-width="64" />
-        <line x1="-32" y1="-16" x2="320" y2="160" stroke="#CE1126" stroke-width="21.33" transform="translate(-21.33, 0)" />
-    </svg>`
+    `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720">
+       <rect x="0" y="0" width="1200" height="720" fill="#003371" />
+       <line x1="0" y1="0" x2="1200" y2="720" stroke="#FFFFFF" stroke-width="144" />
+       <line x1="0" y1="720" x2="1200" y2="0" stroke="#FFFFFF" stroke-width="144" />
+       <line x1="0" y1="0" x2="600" y2="360" stroke="#CE1126" stroke-width="48" transform="translate(-30, 18)" />
+     </svg>`
 
-**HUMAN**:
-Using the previous generated code:
-- Add a new line at the end, staring at the lower left corner and ending in the middle,
-  the line color is CE1126, the width of the line is 1/15 of the width of the rectangle.
-- Move the stating point of the last line -1/20 of the rectangle width to the left.
-- Move the starting point of the last line 1/20 of the rectangle height to the bottom.
-- Transform the last line translating it 1/15 of the rectangle height horizontally to the right.
-
+**HUMAN**: Using the previously generated code, add a line, at the end, from middle of the rectangle to the bottom right vertex. The line has a width of 1/15 of the height of the rectangle. Translate the line 1/40 of the height of the rectangle to the right and 1/40 of the height of the rectangle to the top. The line color is #CE1126.
 **CHAT**:
 
-    `<svg width="640" height="320">
-        <rect width="640" height="320" fill="#003371" />
-        <line x1="0" y1="0" x2="640" y2="320" stroke="white" stroke-width="64" />
-        <line x1="0" y1="320" x2="640" y2="0" stroke="white" stroke-width="64" />
-        <line x1="-32" y1="-16" x2="320" y2="160" stroke="#CE1126" stroke-width="21.33" transform="translate(-21.33, 0)" />
-        <line x1="-32" y1="336" x2="320" y2="160" stroke="#CE1126" stroke-width="21.33" transform="translate(21.33, 0)" />
-    </svg>`
+    `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720">
+       <rect x="0" y="0" width="1200" height="720" fill="#003371" />
+       <line x1="0" y1="0" x2="1200" y2="720" stroke="#FFFFFF" stroke-width="144" />
+       <line x1="0" y1="720" x2="1200" y2="0" stroke="#FFFFFF" stroke-width="144" />
+       <line x1="0" y1="0" x2="600" y2="360" stroke="#CE1126" stroke-width="48" transform="translate(-18, 18)" />
+       <line x1="600" y1="360" x2="1200" y2="720" stroke="#CE1126" stroke-width="48" transform="translate(18, -18)" />
+     </svg>`
 
-**HUMAN**:
-Using the previous generated code:
-- Add a new line at the end, staring at the upper right corner and ending in the middle,
-  the line color is CE1126, the width of the line is 1/15 of the width of the rectangle.
-- Move the stating point of the last line 1/20 of the rectangle width to the right.
-- Move the starting point of the last line 1/20 of the rectangle height to the top.
-- Transform the last line translating it 1/15 of the rectangle height horizontally to the left.
-
+**HUMAN**: Using the previously generated code, add a line, at the end, from the bottom left vertex to the middle. The line has a width of 1/15 of the height of the rectangle. Translate the line 1/40 of the height of the rectangle to the right and 1/40 of the height of the rectangle to the bottom. The line color is #CE1126.
 **CHAT**:
 
-    `<svg width="640" height="320">
-        <rect width="640" height="320" fill="#003371" />
-        <line x1="0" y1="0" x2="640" y2="320" stroke="white" stroke-width="64" />
-        <line x1="0" y1="320" x2="640" y2="0" stroke="white" stroke-width="64" />
-        <line x1="-32" y1="-16" x2="320" y2="160" stroke="#CE1126" stroke-width="21.33" transform="translate(-21.33, 0)" />
-        <line x1="-32" y1="336" x2="320" y2="160" stroke="#CE1126" stroke-width="21.33" transform="translate(21.33, 0)" />
-        <line x1="672" y1="-16" x2="320" y2="160" stroke="#CE1126" stroke-width="21.33" transform="translate(-21.33, 0)" />
-    </svg>`
+    `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720">
+       <rect x="0" y="0" width="1200" height="720" fill="#003371" />
+       <line x1="0" y1="0" x2="1200" y2="720" stroke="#FFFFFF" stroke-width="144" />
+       <line x1="0" y1="720" x2="1200" y2="0" stroke="#FFFFFF" stroke-width="144" />
+       <line x1="0" y1="0" x2="600" y2="360" stroke="#CE1126" stroke-width="48" transform="translate(-18, 18)" />
+       <line x1="600" y1="360" x2="1200" y2="720" stroke="#CE1126" stroke-width="48" transform="translate(18, -18)" />
+       <line x1="0" y1="720" x2="600" y2="360" stroke="#CE1126" stroke-width="48" transform="translate(18, 18)" />
+     </svg>`
 
-**HUMAN**:
-Using the previous generated code:
-- Add a new line at the end, staring at the lower right corner and ending in the middle,
-  the line color is CE1126, the width of the line is 1/15 of the width of the rectangle.
-- Move the stating point of the last line 1/20 of the rectangle width to the right.
-- Move the starting point of the last line 1/20 of the rectangle height to the bottom.
-- Transform the last line translating it 1/15 of the rectangle height horizontally to the right.
-
+**HUMAN**: Using the previously generated code, add a line, at the end, from middle of the rectangle to the top right vertex. The line has a width of 1/15 of the height of the rectangle. Translate the line 1/40 of the height of the rectangle to the left and 1/40 of the height of the rectangle to the top. The line color is #CE1126.
 **CHAT**:
 
-    `<svg width="640" height="320">
-        <rect width="640" height="320" fill="#003371" />
-        <line x1="0" y1="0" x2="640" y2="320" stroke="white" stroke-width="64" />
-        <line x1="0" y1="320" x2="640" y2="0" stroke="white" stroke-width="64" />
-        <line x1="-32" y1="-16" x2="320" y2="160" stroke="#CE1126" stroke-width="21.33" transform="translate(-21.33, 0)" />
-        <line x1="-32" y1="336" x2="320" y2="160" stroke="#CE1126" stroke-width="21.33" transform="translate(21.33, 0)" />
-        <line x1="672" y1="-16" x2="320" y2="160" stroke="#CE1126" stroke-width="21.33" transform="translate(-21.33, 0)" />
-        <line x1="672" y1="336" x2="320" y2="160" stroke="#CE1126" stroke-width="21.33" transform="translate(21.33, 0)" />
-    </svg>`
+    `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720">
+       <rect x="0" y="0" width="1200" height="720" fill="#003371" />
+       <line x1="0" y1="0" x2="1200" y2="720" stroke="#FFFFFF" stroke-width="144" />
+       <line x1="0" y1="720" x2="1200" y2="0" stroke="#FFFFFF" stroke-width="144" />
+       <line x1="0" y1="0" x2="600" y2="360" stroke="#CE1126" stroke-width="48" transform="translate(-18, 18)" />
+       <line x1="600" y1="360" x2="1200" y2="720" stroke="#CE1126" stroke-width="48" transform="translate(18, -18)" />
+       <line x1="0" y1="720" x2="600" y2="360" stroke="#CE1126" stroke-width="48" transform="translate(18, 18)" />
+       <line x1="600" y1="360" x2="1200" y2="0" stroke="#CE1126" stroke-width="48" transform="translate(-18, -18)" />
+     </svg>`
 
 #### Draw the St. George's Cross
 
-**HUMAN**:
-Using the previous generated code:
-- Add a new line at the end that divide the rectangle horizontally in two equal parts,
-  the line is white and the width of the line is 1/3 of the height.
-- Add a new line at the end that divide the rectangle vertically in two equal parts,
-  the line is white and the width of the line is 1/3 of the height.
-- Add a new line at the end that divide the rectangle horizontally in two equal parts,
-  the line color is #CE1126 and the width of the line is 1/5 of the height.
-- Add a new line at the end that divide the rectangle vertically in two equal parts,
-  the line color is #CE1126 and the width of the line is 1/5 of the height.
+**HUMAN**:Using the previous generated code: add a new line at the end that divide the rectangle horizontally in two equal parts, the line is white and the width of the line is 1/3 of the rectangle height.
 
 **CHAT**:
 
-    `<svg xmlns="http://www.w3.org/2000/svg" width="640" height="320">
-      <rect x="0" y="0" width="640" height="320" fill="#002147" />
-      <line x1="0" y1="320" x2="640" y2="0" stroke="#fff" stroke-width="64" />
-      <line x1="0" y1="0" x2="640" y2="320" stroke="#fff" stroke-width="64" />
-      <line x1="-32" y1="-16" x2="320" y2="160" stroke="#CE1126" stroke-width="21.33" transform="translate(-21.33,0)"/>
-      <line x1="-32" y1="336" x2="320" y2="160" stroke="#CE1126" stroke-width="21.33" transform="translate(21.33,0)"/>
-      <line x1="672" y1="-16" x2="320" y2="160" stroke="#CE1126" stroke-width="21.33" transform="translate(-21.33,0)"/>
-      <line x1="672" y1="336" x2="320" y2="160" stroke="#CE1126" stroke-width="21.33" transform="translate(21.33,0)"/>
-      <line x1="0" y1="160" x2="640" y2="160" stroke="white" stroke-width="106.67" />
-      <line x1="320" y1="0" x2="320" y2="320" stroke="white" stroke-width="106.67" />
-      <line x1="0" y1="160" x2="640" y2="160" stroke="#CE1126" stroke-width="64" />
-      <line x1="320" y1="0" x2="320" y2="320" stroke="#CE1126" stroke-width="64" />
-    </svg>`
+    `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720">
+       <rect x="0" y="0" width="1200" height="720" fill="#003371" />
+       <line x1="0" y1="0" x2="1200" y2="720" stroke="#FFFFFF" stroke-width="144" />
+       <line x1="0" y1="720" x2="1200" y2="0" stroke="#FFFFFF" stroke-width="144" />
+       <line x1="0" y1="0" x2="600" y2="360" stroke="#CE1126" stroke-width="48" transform="translate(-18, 18)" />
+       <line x1="600" y1="360" x2="1200" y2="720" stroke="#CE1126" stroke-width="48" transform="translate(18, -18)" />
+       <line x1="0" y1="720" x2="600" y2="360" stroke="#CE1126" stroke-width="48" transform="translate(18, 18)" />
+       <line x1="600" y1="360" x2="1200" y2="0" stroke="#CE1126" stroke-width="48" transform="translate(-18, -18)" />
+       <line x1="0" y1="360" x2="1200" y2="360" stroke="#FFFFFF" stroke-width="240" />
+     </svg>`

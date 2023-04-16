@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720">
+    <!-- define the sunsetSky gradient from the color of the sky at sunset to the color of the desert. -->
+    <defs>
+        <linearGradient id="sunsetSky" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" style="stop-color:#FFA07A;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#FFDAB9;stop-opacity:1" />
+        </linearGradient>
+    </defs>
+    <!-- define the sunsetDesert gradient from the color of the desert to brown. -->
+    <defs>
+        <linearGradient id="sunsetDesert" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" style="stop-color:#FFDAB9;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#CD853F;stop-opacity:1" />
+        </linearGradient>
+    </defs>
+    <!-- define the cactusGradient gradient from light green to dark green, left to right. -->
+    <defs>
+        <linearGradient id="cactusGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:#00FF00;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#006400;stop-opacity:1" />
+        </linearGradient>
+    </defs>
+    <!-- rectangle 1200,360 filled with sunsetSky gradient -->
+    <rect x="0" y="0" width="1200" height="360" fill="url(#sunsetSky)" />
+    <!-- rectangle 1200,360 filled with the sunsetDesert gradient. -->
+    <rect x="0" y="360" width="1200" height="360" fill="url(#sunsetDesert)" />
+    <!-- circle 100,100 with center in 1000,260 filled with the color of the sun. -->
+    <circle cx="1000" cy="260" r="100" fill="#FFD700" />
+
+    <!-- polygon section 300,360 320,360 960,720 360,720 filled in black.-->
+    <polygon points="300,360 320,360 960,720 360,720" fill="black" />
+    <!-- dotted white line 308,360 660,720 width 5, dash 5,5. -->
+    <line x1="308" y1="360" x2="660" y2="720" stroke="white" stroke-width="5" stroke-dasharray="5,5" />
+    <!-- white line 303,360 365,720 width 3. -->
+    <line x1="303" y1="360" x2="365" y2="720" stroke="white" stroke-width="3" />
+    <!-- white line 317,360 957,720 width 3. -->
+    <line x1="317" y1="360" x2="950" y2="720" stroke="white" stroke-width="3" />
+
+    <g transform="scale(0.5), translate(150,150)">
+        <!-- bird left wing using arc endpoint 100,100 -->
+        <path d="M 100 100 A 100 100 0 0 1 200 100" stroke="black" stroke-width="3" fill="none" />
+        <!-- bird right wing using arc endpoint in 200,100 -->
+        <path d="M 200 100 A 100 100 0 0 1 300 100" stroke="black" stroke-width="3" fill="none" />
+    </g>
+
+    <g transform="translate(90,450) scale(0.5), ">
+        <!-- elipse 50,20 40,20 fill with cactusGradient -->
+        <ellipse cx="50" cy="20" rx="40" ry="20" fill="url(#cactusGradient)" />
+        <!-- rectangle 10,20 80,300 fill with cactusGradient -->
+        <rect x="10" y="20" width="80" height="300" fill="url(#cactusGradient)" />
+        <!-- ellipse 50,320 40,20 fill with cactusGradient -->
+        <ellipse cx="50" cy="320" rx="40" ry="20" fill="url(#cactusGradient)" />
+    </g>
+    <g transform="translate(100,520) rotate(-90,25,10) scale(0.4)">
+        <!-- elipse 50,20 40,20 fill with cactusGradient -->
+        <ellipse cx="50" cy="20" rx="40" ry="20" fill="url(#cactusGradient)" />
+        <!-- rectangle 10,20 80,150 fill with cactusGradient -->
+        <rect x="10" y="20" width="80" height="150" fill="url(#cactusGradient)" />
+        <!-- ellipse 50,170 40,20 fill with cactusGradient -->
+        <ellipse cx="50" cy="170" rx="40" ry="20" fill="url(#cactusGradient)" />
+    </g>
+    <g transform="translate(155,455) scale(0.4)">
+        <!-- elipse 50,20 40,20 fill with cactusGradient -->
+        <ellipse cx="50" cy="20" rx="40" ry="20" fill="url(#cactusGradient)" />
+        <!-- rectangle 10,20 80,150 fill with cactusGradient -->
+        <rect x="10" y="20" width="80" height="150" fill="url(#cactusGradient)" />
+        <!-- ellipse 50,170 40,20 fill with cactusGradient -->
+        <ellipse cx="50" cy="170" rx="40" ry="20" fill="url(#cactusGradient)" />
+    </g>
+
+</svg>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720">
+    <!-- rectangle 1200x720, with the color being RGB 003371 -->
+
+    <!-- St. Andrew's Cross -->
+
+    <!-- Add a white line that goes from the top left vertex to the bottom right vertex.
+    The line has a width of 1/5 the height of the rectangle.
+    Also, add a white line that goes from the bottom left vertex to the top right vertex.
+    The line has a width of 1/5 the height of the rectangle. -->
+
+    <!-- St. Patrick's Cross -->
+
+    <!-- Using the previously generated code, add a line, at the end, from the top left vertex to the middle.
+    The line has a width of 1/15 of the height of the rectangle.
+    Translate the line 1/40 of the height of the rectangle to the left and 1/40
+    of the height of the rectangle to the bottom. The line color is #CE1126. -->
+
+    <!-- Using the previously generated code, add a line, at the end, from middle of the rectangle
+    to the bottom right vertex. The line has a width of 1/15 of the height of the rectangle.
+    Translate the line 1/40 of the height of the rectangle to the right and 1/40 of the height
+    of the rectangle to the top. The line color is #CE1126. -->
+
+    <!--Using the previously generated code, add a line, at the end, from the bottom left vertex to the middle.
+    The line has a width of 1/15 of the height of the rectangle.
+    Translate the line 1/40 of the height of the rectangle to the right and 1/40
+    of the height of the rectangle to the bottom. The line color is #CE1126. -->
+
+    <!-- Using the previously generated code, add a line, at the end,
+    from middle of the rectangle to the top right vertex.
+    The line has a width of 1/15 of the height of the rectangle.
+    Translate the line 1/40 of the height of the rectangle to the left and 1/40 of the height of
+    the rectangle to the top. The line color is #CE1126. -->
+
+    <!-- St. George's Cross -->
+
+    <!-- Using the previous generated code: add a new line at the end that divide the rectangle
+    horizontally in two equal parts, the line is white and the width of the line is 1/3 of
+    the rectangle height. -->
+
+    <!-- Using the previous generated code: add a new line at the end that divide the rectangle
+    vertically in two equal parts, the line is white and the width of the line is 1/3 of the height.-->
+
+    <!-- Using the previous generated code: add a new line at the end that divide the rectangle horizontally
+    in two equal parts, the line is #CE1126 and the width of the line is 1/5 of the rectangle height. -->
+
+    <!-- Using the previous generated code: add a new line at the end that divide the rectangle vertically
+    in two equal parts, the line is #CE1126 and the width of the line is 1/5 of the height. -->
+
+</svg>
