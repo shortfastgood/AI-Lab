@@ -86,6 +86,9 @@ public class ListProcesses {
         sortedChildren.forEach(child -> buildProcessTree(child, level + 1));
     }
 
+    /**
+     * A class representing a process.
+     */
     public static class ProcessInfo {
         private final long pid;
         private final String command;
