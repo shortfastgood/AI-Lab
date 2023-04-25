@@ -50,4 +50,4 @@ large amounts of data and texts simultaneously.
 ### SVG to Image
 
 ChatGPT and Copilot cannot draw, but they are capable of translating human language into a graphical language. 
-[SVG-to-Image](svg-to-image/README.md) explores this approach.
+[SVG-to-Image](text-to-image/README.md) explores this approach.

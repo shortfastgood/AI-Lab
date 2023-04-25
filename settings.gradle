@@ -1,4 +1,4 @@
 rootProject.name = 'AI-Lab'
 
 include 'assistant-vs-human'
-include 'svg-to-image'
+include 'text-to-image'
