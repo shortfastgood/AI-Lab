@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>SVG PacMan Animation</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+</head>
+<body>
+<svg id="svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1536" height="280">
+    <!-- define the sunsetDesert gradient from the color of the desert to brown. -->
+    <defs>
+        <linearGradient id="sunsetDesert" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" style="stop-color:#FFDAB9;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#CD853F;stop-opacity:1" />
+        </linearGradient>
+    </defs>
+    <!-- define the hedgeGradient gradient from light green to dark green, left to right. -->
+    <defs>
+        <linearGradient id="hedgeGradient" x1="0%" y1="0%" x2="100%" y2="50%">
+            <stop offset="0%" style="stop-color:#00FF00;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#006400;stop-opacity:1" />
+        </linearGradient>
+    </defs>
+    <!-- background -->
+    <!-- rectangle 1536.960 filled with the sunsetDesert gradient. -->
+    <rect x="0" y="0" width="1536" height="280" fill="url(#sunsetDesert)" />
+
+    <!-- PacMan path -->
+    <!-- Create a horizontal line starting at (50,50) and ending at (1456,50) with a grey color, a dotted pattern with a 2-pixel dash and a 5-pixel gap, and a stroke width of 2 pixels -->
+    <line x1="50" y1="50" x2="1456" y2="50" stroke="grey" stroke-dasharray="2,5" stroke-width="2" />
+    <!-- Create a vertical line starting at (1456,50) and ending at (1456,209) with a grey color, a dotted pattern with a 2-pixel dash and a 5-pixel gap, and a stroke width of 2 pixels -->
+    <line x1="1456" y1="50" x2="1456" y2="209" stroke="grey" stroke-dasharray="2,5" stroke-width="2" />
+    <!-- Create a horizontal line starting at (50,209) and ending at (1456,209) with a grey color, a dotted pattern with a 2-pixel dash and a 5-pixel gap, and a stroke width of 2 pixels -->
+    <line x1="50" y1="209" x2="1456" y2="209" stroke="grey" stroke-dasharray="2,5" stroke-width="2" />
+    <!-- Create a vertical line starting at (50,50) and ending at (50,209) with a grey color, a dotted pattern with a 2-pixel dash and a 5-pixel gap, and a stroke width of 2 pixels -->
+    <line x1="50" y1="50" x2="50" y2="209" stroke="grey" stroke-dasharray="2,5" stroke-width="2" />
+
+    <!-- C++ generation animation -->
+    <!-- Create a text element with the ID "CPP" at (160,60) with the font family "Verdana", font size 30, black color, and the text "C++" -->
+    <text id="CPP" x="160" y="60" font-family="Verdana" font-size="30" fill="black">C++</text>
+    <!-- Create a text element with the ID "CMD1" at (160,60) with the font family "Verdana", font size 30, black color, and the text "Command" -->
+    <text id="CMD1" x="160" y="60" font-family="Verdana" font-size="30" fill="black">Command</text>
+
+    <!-- Python generation animation -->
+    <!-- Create a text element with the ID "PYTHON" at (440,60) with the font family "Verdana", font size 30, black color, and the text "Python" -->
+    <text id="PYTHON" x="440" y="60" font-family="Verdana" font-size="30" fill="black">Python</text>
+    <!-- Creates a text element with the ID "CMD2" at (440,60) with the font family "Verdana", font size 30, black color, and the text "Command" -->
+    <text id="CMD2" x="440" y="60" font-family="Verdana" font-size="30" fill="black">Command</text>
+
+    <!-- decorations -->
+    <!-- Creates a vertical line starting at (753,50) and ending at (753,209) with a grey color, a dotted pattern with a 2-pixel dash and a 5-pixel gap, and a stroke width of 2 pixels -->
+    <line x1="753" y1="50" x2="753" y2="209" stroke="grey" stroke-dasharray="2,5" stroke-width="2" />
+    <!-- Creates a rectangle with a top-left corner at (100,100), width 570, height 59, and a fill that references a gradient with the ID "hedgeGradient" -->
+    <rect x="100" y="100" width="570" height="59" fill="url(#hedgeGradient)" />
+    <!-- Creates a rectangle with a top-left corner at (828,100), width 570, height 59, and a fill that references a gradient with the ID "hedgeGradient" -->
+    <rect x="828" y="100" width="570" height="59" fill="url(#hedgeGradient)" />
+
+    <g id="PacMan">
+        <!-- circle with radius 30, center 50,50, filled with gold, stroked with black, strokewidth 2 -->
+        <circle cx="50" cy="50" r="30" fill="gold" stroke="black" stroke-width="2" />
+        <!-- path describing circle the first quarter slice, filled with black, stroked with black, do rotate 30 degrees clockwise -->
+        <path id="openMouth" d="M50,50 L50,20 A30,30 0 0,1 80,50 z" fill="black" stroke="black" stroke-width="2" transform="rotate(35,50,50)"/>
+        <!-- animate the visibility of the path from visible to hidden and back again, with a duration of 0.5 seconds, starting at 0 seconds, and repeating indefinitely -->
+        <animate
+                xlink:href="#openMouth"
+                attributeName="visibility"
+                values="visible;hidden"
+                dur="0.5s"
+                begin="0s"
+                repeatCount="indefinite"
+        />
+    </g>
+</svg>
+<script>
+
+    const pacMan = document.getElementById("PacMan");
+    const cmd1 = document.getElementById("CMD1");
+    const cpp = document.getElementById("CPP");
+    const cmd2 = document.getElementById("CMD2");
+    const python = document.getElementById("PYTHON");
+
+    // Create a timeline for the animation
+    const timeline = gsap.timeline({repeat: -1, repeatDelay: 0.5});
+
+    // Add the animation to the timeline
+    timeline.to(cpp, {duration: 0.1, scale: 0.0, ease: "none"});
+    timeline.to(python, {duration: 0.1, scale: 0.0, ease: "none"});
+
+    timeline.to(pacMan, {duration: 1, x: 140, ease: "none"});
+    timeline.to(cmd1, {duration: 0.5, scale: 0.0, ease: "none"});
+    timeline.to(cpp, {duration: 0.5, scale: 1.0, ease: "none"});
+
+    timeline.to(pacMan, {duration: 2, x: 420, ease: "none"});
+    timeline.to(cmd2, {duration: 0.5, scale: 0.0, ease: "none"});
+    timeline.to(python, {duration: 0.5, scale: 1.0, ease: "none"});
+
+    timeline.to(pacMan, {duration: 7, x: 1406, ease: "none"});
+    timeline.to(pacMan, {duration: 0.2, x: 1472, y:8, rotation:105, ease: "none"});
+    timeline.to(pacMan, {duration: 2, y:168, ease: "none"});
+    timeline.to(pacMan, {duration: 0.2, x:1456, y:223, rotation:195, ease: "none"});
+    timeline.to(pacMan, {duration: 10, x: 50, ease: "none"});
+    timeline.to(pacMan, {duration: 0.2, x: -8, y:209, rotation:285, ease: "none"});
+    timeline.to(pacMan, {duration: 2, y: 50, ease: "none"});
+
+</script>
+</body>
+</html>
