@@ -65,7 +65,7 @@ public class ListProcesses {
                 .filter(ProcessHandle::isAlive)
                 .forEach(process -> {
             ProcessHandle.Info processInfo = process.info();
-            String command = processInfo.command().orElse("N/A");
+            String command = processInfo.commandLine().orElse("N/A");
             String[] arguments = processInfo.arguments().orElse(new String[0]);
             processes.add(new ProcessInfo(process.pid(), command, arguments));
         });
