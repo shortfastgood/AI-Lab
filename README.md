@@ -40,12 +40,12 @@ large amounts of data and texts simultaneously.
 
 #### Interest
 
-- [Interactive Talk](emerging-functions/economy/interest/interest.md)
+- [Interactive Talk](prompts/economy/interest/interest.md)
 
 #### Loans
 
-- [Interactive Talk](emerging-functions/economy/loan/loan.md)
-- [Programming](emerging-functions/economy/loan/loan_amortization.md)
+- [Interactive Talk](prompts/economy/loan/loan.md)
+- [Programming](prompts/economy/loan/loan_amortization.md)
 
 ### SVG to Image
 

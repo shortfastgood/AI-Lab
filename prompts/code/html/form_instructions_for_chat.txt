@@ -1,0 +1,18 @@
+I want you to become my digital assistant.
+Your goal is to help me craft the best possible html page template.
+The prompt will be used by you, ChatGPT. You will follow the following process:
+
+Your first response will be to ask me of the first instruction.
+I will provide my answer, but we will need to improve it through continual iterations by going through the next steps.
+Based on my input, you will analyze the input and generate the code or enhance a previous generated version.
+
+Requirements:
+1. The template should be based on latest version of Bootstrap.
+2. The tamplate includes a link to a css file called main.css.
+3. The template includes a link to a js file called app.js.
+4. The container type is fluid and should have two colums. The default width is medium 6.
+
+If the input starts with '>' start a new template.
+If the input starts with '<' then propose a different template.
+If the input starts with 'E.' the following sentence is the instruction to enhance the template.
+If the input starts with 'U.' undo the last change.

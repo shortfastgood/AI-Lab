@@ -38,9 +38,7 @@ public class LoanAmortization {
         double monthlyInterestRate = (annualInterestRate / 100) / 12;
         int totalNumberOfPayments = loanTermYears * 12;
 
-        double monthlyPayment = principal * monthlyInterestRate * Math.pow(1 + monthlyInterestRate, totalNumberOfPayments) /
+       return principal * monthlyInterestRate * Math.pow(1 + monthlyInterestRate, totalNumberOfPayments) /
                 (Math.pow(1 + monthlyInterestRate, totalNumberOfPayments) - 1);
-
-        return monthlyPayment;
     }
 }

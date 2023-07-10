@@ -1,4 +1,4 @@
 rootProject.name = 'AI-Lab'
 
-include 'assistant-vs-human'
+include 'code-generative-ai'
 include 'text-to-image'

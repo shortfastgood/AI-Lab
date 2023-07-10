@@ -15,8 +15,8 @@ buildscript {
         logbackVersion = '1.4.5'
         servletApiVersion = '6.0.0'
         slf4jVersion = '2.0.5'
-        springVersion = '6.0.6'
-        springBootVersion = '3.0.4'
+        springVersion = '6.0.9'
+        springBootVersion = '3.1.0'
         springDependenciesVersion = '1.1.0'
         validationApiVersion = '3.0.2'
 
@@ -47,7 +47,9 @@ plugins {
     id 'jacoco'
     id 'eclipse'
     id 'idea'
-    id 'org.hibernate.orm' version '6.1.6.Final'
+    id 'org.springframework.boot' version '3.1.0'
+    id 'io.spring.dependency-management' version '1.1.0'
+    id 'org.owasp.dependencycheck' version '6.1.6'
 }
 
 group = 'org.homedns.dpaevd'
