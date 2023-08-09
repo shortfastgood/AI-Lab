@@ -1,0 +1,8 @@
+Caricare l'immagine che si vuole elaborare.
+
+Crea una nuova immagine 1024 x 800 estraendo una striscia dal centro.
+La base dell'immagine originale è il lato più corto, per cui la striscia sarà parallela
+al lato più corto dell'originale.
+
+Crea una nuova immagine larga 640 pixel senza modificare l'aspetto e chiamala lappeenranta_09_small, usa la libreria OpenCV
+e non usare la libreria PIL. Non aggiungere commenti o descrizioni, solo il link per scaricare il risultato finale.
