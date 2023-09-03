@@ -1,4 +1,0 @@
-rootProject.name = 'AI-Lab'
-
-include 'code-generative-ai'
-include 'text-to-image'

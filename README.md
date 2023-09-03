@@ -10,11 +10,20 @@
     - [Interest](#interest)
     - [Loans](#loans)
   - [SVG to Image](#svg-to-image)
+  - [Large Language Model Programming with Python](llm-lab/readme.md)
 
 ## Introduction
 
 This project aims to analyze the advantages and side effects of digital assisted work. 
 Initially, it is a collection of experiences using GitHub's Copilot and OpenAI's ChatGPT.
+
+Now, in September 2023, the exploratory phase begins for the use of LLM locally for applications whose data cannot be entrusted to the cloud.
+
+## Technology Adoption Risks
+
+The technology associated with LLM will not disappear, and thus ignoring it means still running the risk of being excluded from those emerging sectors and being penalized by those that will inevitably become obsolete.
+
+Adoption also entails concrete risks, well characterized by a [specific section of OWASP](https://owasp.org/www-project-top-10-for-large-language-model-applications/).
 
 ## Digital Assistant
 
