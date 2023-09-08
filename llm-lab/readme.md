@@ -51,7 +51,7 @@ Simple summary of a WEB page.
 
 #### Addtitional Libraries
 
-    > readability-lxml requests tranformers
+    > pip install readability-lxml requests tranformers
 
 #### Python Code
 
