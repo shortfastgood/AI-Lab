@@ -24,7 +24,7 @@ Simple summary of a PDF file.
 
 #### Additional Libraries
 
-    > pip install pdfminer transformers
+    > pip install pdfminer.six transformers
 
 #### Python Code
 
