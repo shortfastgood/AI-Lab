@@ -3,15 +3,14 @@
 ## Table of Contents
 
 - [Introduction](#introduction)
-- [Technology Adoption Risks](#technology-adoption-risks)
 - [Digital Assistant](#digital-assistant)
   - [Links](#links)
-  - [Prompt Engineering](#prompt-engineering)
-    - [Prompt Engineering Subsection](prompts/prompts.md)
-      - [Image functions](prompts/image/image_functions.md)
-      - [Translator Functions](prompts/translator/translator_functions.md)
-  - [Embedding LLMs into Applications](#embedding-llms-into-applications) 
-    - [Large Language Model Programming with Python](llm-lab/readme.md)
+  - [Interactive Programming](#interactive-programming)
+  - [Economy](#economy) 
+    - [Interest](#interest)
+    - [Loans](#loans)
+  - [SVG to Image](#svg-to-image)
+  - [Large Language Model Programming with Python](llm-lab/readme.md)
 
 ## Introduction
 
@@ -46,5 +45,21 @@ want to venture into this new profession.
 
 See [Prompt Engineering Section](prompts/prompts.md) for examples.
 
-### Embedding LLMs into Applications
+### Economy
 
+The economy, particularly the banking sector, can benefit from a system that can handle 
+large amounts of data and texts simultaneously.
+
+#### Interest
+
+- [Interactive Talk](prompts/economy/interest/interest.md)
+
+#### Loans
+
+- [Interactive Talk](prompts/economy/loan/loan.md)
+- [Programming](prompts/economy/loan/loan_amortization.md)
+
+### SVG to Image
+
+ChatGPT and Copilot cannot draw, but they are capable of translating human language into a graphical language. 
+[SVG-to-Image](text-to-image/README.md) explores this approach.
