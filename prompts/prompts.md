@@ -8,36 +8,7 @@ For description see [Zero-Shot Prompting](https://www.promptingguide.ai/techniqu
 
 For description see [Automatic Reasoning and Tool-use (ART)](https://www.promptingguide.ai/techniques/art)
 
-### ChatGPT
-
-ChatGPT offers a function that uses the ART technique under the name of "advanced data analysis." This function can be activated through the "Settings & Beta" 
-menu that appears when you click on the three dots at the bottom of the sidebar. Once the option is activated, a new chat of the type "advanced data analysis" 
-is created. In the prompt line, the + symbol appears, which, when selected, allows you to upload one or more files into the chat.
-
-At this point, it is necessary to formulate a request that leads to the processing of the uploaded data. Once sent, ChatGPT generates an ad-hoc Python program 
-that is executed. If the outcome is positive, the chat provides a link to download the result; otherwise, it proceeds with error correction. In the end, 
-it is also possible to download the generated Python code.
-
-The chat has access to the entire standard library of Python. To use ART, there's no need for Python programming knowledge, 
-but those who have it can influence the chat's decisions.
-
-### Image Processing with ChatGPT
-
-For image processing, in my examples, I instructed the chat not to use the standard PIL library, but to prefer OpenCV.
-
-#### Image Downsizing
-
-    Create a new image 640 pixels wide without changing the aspect and name it "result_small", 
-    use the OpenCV library and do not use the PIL library. Do not add comments or descriptions, 
-    just the link to download the final result.
-
-#### Extract from Image
-
-In this case, it's about extracting a strip from a portrait-type image and transforming it into a landscape-type image.
-
-    Create a new 1024 x 800 image by extracting a strip from the center. The base of the original image is the shorter side, 
-    so the strip will be parallel to the shorter side of the original. Use the OpenCV library and do not use the PIL library. 
-    Do not add comments or descriptions, just the link to download the final result.
+[ART with ChatGPT](./ART/art_with_chat_gpt.md)
 
 ## Prompt Function
 

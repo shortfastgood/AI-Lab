@@ -8,6 +8,7 @@
   - [Links](#links)
   - [Prompt Engineering](#prompt-engineering)
     - [Prompt Engineering Subsection](prompts/prompts.md)
+      - [ART with ChatGPT](prompts/ART/art_with_chat_gpt.md)
       - [Image functions](prompts/image/image_functions.md)
       - [Translator Functions](prompts/translator/translator_functions.md)
   - [Embedding LLMs into Applications](#embedding-llms-into-applications) 
