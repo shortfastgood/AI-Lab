@@ -11,8 +11,7 @@
       - [ART with ChatGPT](prompts/ART/art_with_chat_gpt.md)
       - [Image functions](prompts/image/image_functions.md)
       - [Translator Functions](prompts/translator/translator_functions.md)
-  - [Embedding LLMs into Applications](#embedding-llms-into-applications) 
-    - [Large Language Model Programming with Python](llm-lab/readme.md)
+  - [Embedding LLMs into Applications](./llm-lab/readme.md)
 
 ## Introduction
 
@@ -46,6 +45,3 @@ interpret the context of a request. In this regard, [Prompt Engineering Guide](h
 want to venture into this new profession.
 
 See [Prompt Engineering Section](prompts/prompts.md) for examples.
-
-### Embedding LLMs into Applications
-
