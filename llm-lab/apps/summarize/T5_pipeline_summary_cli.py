@@ -42,7 +42,7 @@ def main(input_value):
     if is_existing_readable_file(input_value):
         print(f"Summarizing the content of {input_value} ...\n")
         # Get the summary
-        summary = summarizer(extract_text_from_pdf(input_value)[0:2350], max_length=350, min_length=25, do_sample=False)
+        summary = summarizer(extract_text_from_pdf(input_value)[0:2200], max_length=350, min_length=25, do_sample=False)
         # Print summary
         print(textwrap.fill(summary[0]['summary_text'], width=80))
 
