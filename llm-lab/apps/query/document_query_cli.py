@@ -80,7 +80,7 @@ if __name__ == "__main__":
         db = FAISS.load_local(index_dir, embeddings)
     except:
         print('no index on disk, creating new...')
-        db = load_split_and_vectorize(data_dir, embeddings)
+        db = load_split_and_vectorize(data_dir, index_dir, embeddings)
         print('... index created successfully!')
 
 
