@@ -21,7 +21,7 @@ The following instructions add to the conda environment the libraries required f
     > pip install pdfminer.six transformers
     > pip install readability-lxml requests transformers
     > pip install accelerate
-    > pip install langchain faiss-cpu sentence_transformers unstructured pdf2image
+    > pip install langchain faiss-cpu sentence_transformers unstructured pdf2image protobuf 
 
 ### Huggingface Cache
 
@@ -38,4 +38,5 @@ The following instructions add to the conda environment the libraries required f
 
 ### References
 
-- [Hugging Face's Tranformers](https://huggingface.co/docs/transformers/index)
+- [Hugging Face's Tranformers Docs](https://huggingface.co/docs/transformers/index)
+- [Hugging Face's Tranformers GitHUB](https://github.com/huggingface/transformers)
