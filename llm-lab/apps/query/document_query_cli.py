@@ -2,10 +2,13 @@ import argparse
 from huggingface_hub import snapshot_download
 from langchain.document_loaders import DirectoryLoader, PDFMinerLoader
 from langchain.embeddings import HuggingFaceEmbeddings
+from langchain.llms import HuggingFacePipeline
+from langchain.chains.question_answering import load_qa_chain
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.vectorstores import FAISS
 from pathlib import Path
 import os
+import textwrap
 
 # Download model from HuggingFace Hub
 # @param model_id: The model id to download.
@@ -46,7 +49,7 @@ def load_split_and_vectorize(folder, target, embeddings):
     text_splitter = RecursiveCharacterTextSplitter(chunk_size=500, chunk_overlap=10)
     docs = text_splitter.split_documents(documents)
     db = FAISS.from_documents(docs, embeddings)
-    db.save_local("opdf_index")
+    db.save_local(target)
     return db
 
 config_file = f"{os.getcwd()}/config.properties"
@@ -83,14 +86,31 @@ if __name__ == "__main__":
         db = load_split_and_vectorize(data_dir, index_dir, embeddings)
         print('... index created successfully!')
 
-
     # select model
     if (properties["model.default"] is not None) and (
         properties["model.default"] != ""
     ):
-        model_path = f"{Path.home()}/LLM/{properties['model.default']}"
+        model_choice = properties["model.default"]
+        model_path = f"{Path.home()}/LLM/{properties[model_choice]}"
+
+    parser = argparse.ArgumentParser(description="Text query CLI.")
+    parser.add_argument("query", type=str, help="A query string.")
+    args = parser.parse_args()
 
     if not is_existing_readable_directory(model_path):
         print(f"The LLM model '{model_path}' is missing!, starting download...")
         dowload_model(properties["model.default"])
         print(f"Model '{properties['model.default']}' ... downloaded successfully!")
+
+    # initialize pipeline
+    llm = HuggingFacePipeline.from_model_id(model_id=model_path,
+                                            task = 'text2text-generation',
+                                            model_kwargs={"temperature":0.60, "min_length":35, "max_length":500, "repetition_penalty": 5.0, "do_sample": True})
+
+    # define chain
+    chain = load_qa_chain(llm, chain_type="stuff")
+
+    # run chain against your question
+    print(f"Question: '{args.query}'")
+    docs = db.similarity_search(args.query)
+    print(f"Answer: {textwrap.fill(chain.run(input_documents=docs, question=args.query), width=80)}")
