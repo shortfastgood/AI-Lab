@@ -56,6 +56,7 @@ config_file = f"{os.getcwd()}/config.properties"
 data_dir = "./data"
 index_dir = "./index"
 properties = {}
+model_choice = ""
 model_path = ""
 
 if __name__ == "__main__":
@@ -99,8 +100,8 @@ if __name__ == "__main__":
 
     if not is_existing_readable_directory(model_path):
         print(f"The LLM model '{model_path}' is missing!, starting download...")
-        dowload_model(properties["model.default"])
-        print(f"Model '{properties['model.default']}' ... downloaded successfully!")
+        dowload_model(properties[model_choice])
+        print(f"Model '{properties[model_choice]}' ... downloaded successfully!")
 
     # initialize pipeline
     llm = HuggingFacePipeline.from_model_id(model_id=model_path,
