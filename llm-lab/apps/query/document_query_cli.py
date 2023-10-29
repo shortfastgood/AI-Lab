@@ -18,29 +18,41 @@ def dowload_model(model_id):
         os.makedirs(model_dir)
     snapshot_download(model_id, revision="main", local_dir=model_dir, local_dir_use_symlinks=False)
 
-# Check if the input is an existing readable directory.
-# @param filepath: The path to the directory.
-# @return: True if the directory exists and is readable, False otherwise.
 def is_existing_readable_directory(filepath: str) -> bool:
+    """
+    Check if the input is an existing readable directory.
+
+    :params filepath: The path to the directory.
+    :return: True if the directory exists and is readable, False otherwise.
+    """
     return os.path.isdir(filepath) and os.access(filepath, os.R_OK)
 
 
-# Check if the input is an existing readable file.
-# @param filepath: The path to the file.
-# @return: True if the file exists and is readable, False otherwise.
-def is_existing_readable_file(filepath: str) -> bool:
-    return os.path.isfile(filepath) and os.access(filepath, os.R_OK)
+def is_existing_readable_file(filePath: str) -> bool:
+    """
+    Check if the input is an existing readable file.
+
+    :param filePath: The path to the file.
+    :return: True if the file exists and is readable, False otherwise.
+    """
+    return os.path.isfile(filePath) and os.access(filePath, os.R_OK)
 
 
-# load configuration file
-def load_config(config_path):
+def load_config(config_path: str) -> object:
+    """
+    Load Java properties like configuration file, but only if it exists and is readable.
+
+    :param config_path: The path to the configuration file.
+    :return: properties
+    """
     properties = {}
-    with open(config_path, "r") as f:
-        for line in f:
-            line = line.strip()
-            if line and not line.startswith("#"):
-                key, value = line.split("=", 1)
-                properties[key] = value
+    if is_existing_readable_file(config_path):
+        with open(config_path, "r") as f:
+            for line in f:
+                line = line.strip()
+                if line and not line.startswith("#"):
+                    key, value = line.split("=", 1)
+                    properties[key] = value
     return properties
 
 def load_split_and_vectorize(folder, target, embeddings):
