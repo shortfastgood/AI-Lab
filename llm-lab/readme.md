@@ -18,10 +18,7 @@ In order to use jupyter notebooks Intellij will prompt you for the permission to
 
 The following instructions add to the conda environment the libraries required for this lab
 
-    > pip install pdfminer.six transformers
-    > pip install readability-lxml requests
-    > pip install accelerate
-    > pip install langchain faiss-cpu sentence_transformers unstructured pdf2image protobuf 
+    > pip install -r requirements.txt 
 
 ### Huggingface Cache
 
