@@ -35,5 +35,18 @@ The following instructions add to the conda environment the libraries required f
 
 ### References
 
+#### Documentation
+
 - [Hugging Face's Tranformers Docs](https://huggingface.co/docs/transformers/index)
 - [Hugging Face's Tranformers GitHUB](https://github.com/huggingface/transformers)
+- [haystack](https://github.com/deepdoctection/deepdoctection) by deepset
+
+#### Libraries
+
+- [DeepDoctection](https://github.com/deepdoctection/deepdoctection)
+- [Detectron2](https://ai.meta.com/tools/detectron2/)
+- [docTR](https://mindee.github.io/doctr/index.html)
+- [fastText](https://fasttext.cc/docs/en/supervised-tutorial.html)
+- [jdeskew](https://pypi.org/project/jdeskew/)
+- [pdfplumber](https://github.com/jsvine/pdfplumber)
+- [R-CNNs](https://d2l.ai/chapter_computer-vision/rcnn.html)

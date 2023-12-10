@@ -1,7 +1,10 @@
+farm-haystack==1.22.1
 feedparser==6.0.10
-huggingface-hub==0.19.1
-langchain==0.0.335
-nltk=3.8.1
+  # required by farm-haystack
+huggingface-hub==0.17.3
+langchain==0.0.340
+nltk==3.8.1
 pdfminer.six==20221105
 readability-lxml==0.8.1
-transformers==4.35.0
+  # required by farm-haystack
+transformers==4.34.1
