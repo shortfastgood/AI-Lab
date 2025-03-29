@@ -96,8 +96,8 @@ of the time compared to the basic autocomplete features IDEs offered before the 
 
 ### Vibe Coding Tools
 
-see [Vibe Coding Section](./vibe-coding/vibe-coding) for more details. If you aren't familiar with prompting you should read the
-[Prompt Engineering Section](./prompts/prompts.md) first.
+see [Vibe Coding Section](./vibe-coding/vibe-coding.md) for more details. If you aren't familiar with prompting you should read the
+[Prompt Engineering Guide](https://www.promptingguide.ai/) first.
 
 ### Prompt Engineering
 
