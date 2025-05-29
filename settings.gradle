@@ -1,0 +1,8 @@
+rootProject.name = 'AI-Lab'
+
+include 'code-generative-ai'
+
+include 'text-to-image'
+
+// Enable Gradle's new configuration cache feature for faster builds (optional)
+enableFeaturePreview('STABLE_CONFIGURATION_CACHE')
