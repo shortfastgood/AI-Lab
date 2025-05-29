@@ -85,19 +85,26 @@ have been to replace IntelliJ/Visual Studio Code + Copilot with [Cursor](https:/
 Both of these editors offer the ability to program with suggestions, as before, or to delegate code management to the agent 
 and program using natural language commands.
 
-I have opted for a more radical approach and decided to adopt the "[vibe coding](https://en.wikipedia.org/wiki/Vibe_coding)" technique, 
-with as few compromises as possible.
+~~I have opted for a more radical approach and decided to adopt the "[vibe coding](https://en.wikipedia.org/wiki/Vibe_coding)" technique, 
+with as few compromises as possible.~~
+
+**Update May 2025**.
+
+Vibe coding did not meet my needs, so I returned to using Copilot, which has since been improved with the addition of a well-designed agent. Ultimately, integrating the agent into the IDE proved superior to CLI-based tools.
 
 ### GitHub Copilot
 GitHub Copilot was originally conceived as an IDE extension. It works effectively as a plugin in both IntelliJ and 
 Visual Studio Code, providing a specialized programming chat that can anticipate a developer’s intentions and suggest 
 entire code snippets. After two years of working with Copilot, I can confidently say that I have saved 40% to 70% 
-of the time compared to the basic autocomplete features IDEs offered before the advent of AI. 
+of the time compared to the basic autocomplete features IDEs offered before the advent of AI.
 
-### Vibe Coding Tools
+**Update may 2025**
 
-see [Vibe Coding Section](./vibe-coding/README.md) for more details. If you aren't familiar with prompting you should read the
-[Prompt Engineering Guide](https://www.promptingguide.ai/) first.
+With the addition of the edit function and, later, the agent, Copilot has become a highly practical and easy-to-use tool. In the Visual Studio Code version, it can be further enhanced with a wide range of extensions and MCP servers.
+
+### Vibe Coding
+
+see [Vibe Coding Section](./vibe-coding/README.md) for more details. 
 
 ### Prompt Engineering
 
