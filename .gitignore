@@ -8,7 +8,6 @@
 .gradle/
 bin/
 build/
-gradle/
 
 #IDEA
 .idea
@@ -53,3 +52,4 @@ target/
 *.sublime-workspace
 nbproject
 Thumbs.db
+.aider*
