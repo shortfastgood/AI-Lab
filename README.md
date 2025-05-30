@@ -102,6 +102,8 @@ of the time compared to the basic autocomplete features IDEs offered before the 
 
 With the addition of the edit function and, later, the agent, Copilot has become a highly practical and easy-to-use tool. In the Visual Studio Code version, it can be further enhanced with a wide range of extensions and MCP servers.
 
+The time savings are tangible. Copilot enables faster progress and clearer thinking. Creativity and strategy are enhanced, but the main challenge is breaking old habits to adopt new ways of thinking and working.
+
 ### Vibe Coding
 
 see [Vibe Coding Section](./vibe-coding/README.md) for more details. 
