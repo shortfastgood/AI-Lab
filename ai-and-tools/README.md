@@ -4,4 +4,5 @@ This directory contains resources and tools for developing AI applications. It i
 
 ## Contents
 
-- [AI Development Environment](#ai-development-environment/README.md) - Instructions and setup for creating an AI development environment.
+- [AI Development Environment](ai-development-environment/README.md) - Instructions and setup for creating an AI development environment.
+- [Software Requirements](software/README.md) - List of required software and tools for AI development.

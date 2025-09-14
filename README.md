@@ -4,6 +4,11 @@
 
 - [Introduction](#introduction)
 - [Technology Adoption Risks](#technology-adoption-risks)
+- [Experiences and Outcomes of Artificial Intelligence Adoption](#experiences-and-outcomes-of-artificial-intelligence-adoption)
+  - [AI-Assisted Development](#ai-assisted-development)
+    - [AI in the Java Ecosystem](#ai-in-the-java-ecosystem)
+    - [AI in the Python Ecosystem](#ai-in-the-python-ecosystem)
+    - [AI in the JavaScript Ecosystem](#ai-in-the-javascript-ecosystem)ß
 - [Prompt Engineering](#prompt-engineering)
 
 ## Introduction
@@ -44,7 +49,7 @@ The adoption of artificial intelligence in the AI-Lab project has led to a serie
 
 The integration of AI tools into the development process has revolutionized how code is written, reviewed, and maintained. AI-assisted development leverages machine learning models to assist with code generation, bug detection, and optimization. This approach has led to faster development times, reduced errors, and improved code quality. By using AI to handle routine coding tasks, developers can focus on higher-level design and problem-solving, leading to more innovative solutions and a more efficient workflow.
 
-Refer to [AI-Assisted Development Section](ai-assisted-development/README.md) for details.
+Refer to [AI-Assisted Development Section](ai-and-tools/README.md) for details.
 
 #### AI in the Java Ecosystem
 
