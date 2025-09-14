@@ -4,111 +4,39 @@
 
 - [Introduction](#introduction)
 - [Technology Adoption Risks](#technology-adoption-risks)
-- [Chat](#chat)
-  - [ChatGPT](#chatgpt)
-  - [Gemini](#gemini)
-  - [Claude](#claude)
-  - [Deepseek](#deepseek)
-- [Digital Assistant](#digital-assistant)
-  - [GitHub Copilot](#github-copilot)
-  - [Vibe Coding Tools](#vibe-coding-tools)
-  - [Prompt Engineering](#prompt-engineering)
-    - [Prompt Engineering Subsection](prompts/prompts.md)
-      - [ART with ChatGPT](prompts/ART/art_with_chat_gpt.md)
-      - [Image functions](prompts/image/image_functions.md)
-      - [Translator Functions](prompts/translator/translator_functions.md)
-  - [Embedding LLMs into Applications](./llm-lab/readme.md)
+- [Prompt Engineering](#prompt-engineering)
 
 ## Introduction
 
-This project aims to analyze the advantages and side effects of digital assisted work.
+This project began in 2023, a pivotal year that marked the emergence of conversational AI in mainstream consciousness. The world witnessed the rise of chat-based interfaces, with ChatGPT leading the charge and fundamentally changing how people interact with artificial intelligence. What started as curiosity about these new conversational capabilities has evolved into a comprehensive exploration of AI-assisted development workflows and their transformative potential.
 
-Initially, it is a collection of experiences using GitHub's Copilot and OpenAI's ChatGPT.
+Initially, this repository served as a collection of experiences using GitHub's Copilot and OpenAI's ChatGPT. These tools represented the first wave of AI integration into daily workflows, offering code suggestions and conversational assistance that dramatically improved productivity. However, as the technology matured, the focus shifted from simple chat interactions to something far more sophisticated: autonomous agents and advanced language models capable of complex reasoning and task execution.
 
+An agent, in the context of AI, is an autonomous system that can perceive its environment, make decisions, and take actions to achieve specific goals. Unlike traditional chat interfaces that respond to individual queries, agents can maintain context across multiple interactions, plan complex multi-step tasks, and execute them with minimal human intervention. They can analyze problems, break them down into manageable components, use tools and APIs, and iterate on solutions until objectives are met. Modern AI agents represent a paradigm shift from reactive assistance to proactive collaboration.
 
+The journey from chat-based AI to intelligent agents reflects the broader evolution of artificial intelligence from impressive demos to practical, production-ready tools. Where early ChatGPT interactions were primarily conversational, today's agents can write code, debug applications, manage infrastructure, conduct research, and even coordinate with other agents to solve complex problems. This evolution has transformed not just individual productivity, but entire approaches to software development and problem-solving.
 
-Then, in September 2023, the exploratory phase began for local LLM usage in applications that could not rely on cloud data storage. 
-Until early 2025, my research had not been very successful, as it inevitably ended in resource-intensive tests with various models 
-capable of operating on limited resources.
+Throughout 2023 and into 2024, the exploratory phase expanded to include local language model deployment for applications that couldn't rely on cloud-based data storage. This research proved challenging initially, often culminating in resource-intensive experiments with various models designed for limited hardware capabilities. The breakthrough came with the release of advanced models like DeepSeek-R1, whose 14b and 32b variants demonstrated that sophisticated AI capabilities could run effectively on standard laptop hardware, albeit requiring patience compared to cloud-based alternatives.
 
-With the release of the deepseek-r1 model, things began to change. The 14b and 32b variants ran well on a standard notebook, 
-though patience was still required to be compared to online models. Nonetheless, it was now possible to begin working with them.
+This technological progression has profound implications for how we approach digital work. The shift from keyboard-centric development to natural language programming represents more than just a new tool – it's a fundamental reimagining of human-computer interaction. Developers are increasingly moving away from traditional IDE constraints toward more creative, collaborative relationships with intelligent systems.
+
+The project now serves as both a historical record of this AI evolution and a practical guide for navigating the transition from traditional development practices to AI-augmented workflows. It explores the advantages, challenges, and strategic implications of adopting these technologies, while providing concrete examples and best practices for teams looking to integrate AI agents into their development processes.
+
+As we move forward, the question is no longer whether AI will transform software development, but how quickly organizations can adapt to leverage these capabilities while mitigating associated risks. This repository documents that ongoing transformation.
 
 ## Technology Adoption Risks
 
-The technology associated with LLM will not disappear, and thus ignoring it means still running the risk of being excluded 
-from those emerging sectors and being penalized by those that will inevitably become obsolete.
+While AI technology offers unprecedented opportunities, it introduces significant new risks that demand careful attention. These emerging threats differ fundamentally from traditional cybersecurity concerns, requiring updated security protocols and awareness.
 
-In 2025, those who do not adopt AI face the greatest risks. In various software development sectors, AI is rapidly advancing, 
-drastically reducing reliance on keyboards or mice and shifting developers toward more creative endeavours.
+**Prompt Injection** represents a critical vulnerability where malicious users manipulate AI systems by embedding harmful instructions within seemingly innocent inputs. For example, a user might submit a document for analysis that contains hidden commands instructing the AI to ignore previous instructions and reveal sensitive information or perform unauthorized actions. This attack vector can compromise entire AI-powered applications.
 
-The significant risk for businesses is the potential emergence of a startup offering the same project in a shorter timeframe 
-and at lower costs, all without compromising quality.
+**Jailbreaking** involves techniques to bypass AI safety mechanisms and ethical guidelines. Attackers use sophisticated psychological manipulation or technical exploits to make AI systems generate harmful content, reveal proprietary information, or perform actions outside their intended scope. These attacks can turn helpful AI assistants into potential security liabilities.
 
-To counter this threat, organizations must plan to encourage developers to leave the secure environment of traditional IDEs 
-in favor of programming tools that rely on natural language. This approach presents a genuine challenge for those unaccustomed 
-to "speaking" directly to their computer.
+Additional risks include data poisoning, where training data is deliberately corrupted to influence AI behavior, and model stealing, where proprietary AI capabilities are extracted through careful probing. Organizations also face challenges with AI hallucinations leading to incorrect business decisions, privacy breaches through inadvertent data exposure, and dependency risks when AI systems fail.
 
-Adoption also entails concrete risks, well characterized by a [specific section of OWASP](https://owasp.org/www-project-top-10-for-large-language-model-applications/).
+The [OWASP Top 10 for Large Language Model Applications](https://owasp.org/www-project-top-10-for-large-language-model-applications/) provides comprehensive guidance for mitigating these risks. However, deploying models locally in protected environments increasingly offers viable solutions for security-conscious organizations seeking to harness AI benefits while maintaining control over sensitive data and operations.
 
-However, the risks highlighted by OWASP are increasingly mitigated by the option to deploy models locally in a protected and 
-secure environment.
-
-## Chat
-The Chat section is dedicated to the use of LLMs in the form of chatbots.
-
-For various reasons, I use ChatGPT, even though I have no direct affiliation with OpenAI. Consequently, 
-my knowledge of other solutions is sometimes limited and occasionally indirect (drawn from available literature).
-
-### ChatGPT
-[ChatGPT](https://chat.openai.com) was the first online service that enabled interaction with a large language model. 
-It underwent significant development and remains a leading choice among moderately priced offerings ($20/month).
-
-### Gemini
-[Gemini](https://gemini.google.com) replaced Google's early attempts with Bard. The current service is competitive with ChatGPT, 
-including in terms of cost (approximately $22/month).
-
-### Claude
-[Claude](https://claude.ai) is a product of Anthropic, a company founded by former OpenAI employees. 
-Competitive with both ChatGPT and Gemini, the price is 20$/month.
-
-### Deepseek
-[Deepseek](https://chat.deepseek.com) proposes a new kind of model with advanced features that surpass competing solutions. 
-At present, the chat requires no subscription and can be used entirely free of charge.
-
-## Digital Assistant
-
-The digital assistant is an interactive agent that assists users in carrying out actions or creating solutions in the digital realm.
-
-I started with GitHub Copilot, which I have not completely abandoned yet, but it is time to move forward. One option would 
-have been to replace IntelliJ/Visual Studio Code + Copilot with [Cursor](https://www.cursor.com) or [Windsurf](ttps://codeium.com/windsurf). 
-Both of these editors offer the ability to program with suggestions, as before, or to delegate code management to the agent 
-and program using natural language commands.
-
-~~I have opted for a more radical approach and decided to adopt the "[vibe coding](https://en.wikipedia.org/wiki/Vibe_coding)" technique, 
-with as few compromises as possible.~~
-
-**Update May 2025**.
-
-Vibe coding did not meet my needs, so I returned to using Copilot, which has since been improved with the addition of a well-designed agent. Ultimately, integrating the agent into the IDE proved superior to CLI-based tools.
-
-### GitHub Copilot
-GitHub Copilot was originally conceived as an IDE extension. It works effectively as a plugin in both IntelliJ and 
-Visual Studio Code, providing a specialized programming chat that can anticipate a developer’s intentions and suggest 
-entire code snippets. After two years of working with Copilot, I can confidently say that I have saved 40% to 70% 
-of the time compared to the basic autocomplete features IDEs offered before the advent of AI.
-
-**Update may 2025**
-
-With the addition of the edit function and, later, the agent, Copilot has become a highly practical and easy-to-use tool. In the Visual Studio Code version, it can be further enhanced with a wide range of extensions and MCP servers.
-
-The time savings are tangible. Copilot enables faster progress and clearer thinking. Creativity and strategy are enhanced, but the main challenge is breaking old habits to adopt new ways of thinking and working.
-
-### Vibe Coding
-
-see [Vibe Coding Section](./vibe-coding/README.md) for more details. 
-
-### Prompt Engineering
+## Prompt Engineering
 
 Prompt engineering is new discipline that emerges from the enhanced capabilities of services based on LLMs to understand natural languages and correctly 
 interpret the context of a request. In this regard, [Prompt Engineering Guide](https://www.promptingguide.ai/) offers an excellent guide for those who 
