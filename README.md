@@ -67,6 +67,22 @@ JavaScript, as a dominant language for web development, has benefited greatly fr
 
 Setting up AI tools requires careful consideration of the development environment and the specific needs of the project. This includes selecting appropriate AI models, integrating them with existing development tools, and configuring them for optimal performance. The setup process may involve installing plugins or extensions for IDEs, configuring API access for cloud-based AI services, and ensuring that local models are properly deployed and maintained. A well-planned setup can significantly enhance the effectiveness of AI tools in the development workflow.
 
+### Commands
+
+Python environment setup script for Linux and macOS:
+
+```bash
+source ./instpy.sh
+```
+
+#### MarkItDown MCP Server Setup
+
+- [Documentation](https://github.com/microsoft/markitdown?tab=readme-ov-file)
+
+```bash
+source ./markitdown.sh 
+```
+
 ## Prompt Engineering
 
 Prompt engineering is new discipline that emerges from the enhanced capabilities of services based on LLMs to understand natural languages and correctly 
