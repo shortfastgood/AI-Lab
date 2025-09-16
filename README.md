@@ -45,6 +45,20 @@ The [OWASP Top 10 for Large Language Model Applications](https://owasp.org/www-p
 
 The adoption of artificial intelligence in the AI-Lab project has led to a series of practical experiences and tangible results. Integrating tools such as GitHub Copilot and ChatGPT has improved productivity, simplified code writing, and facilitated the resolution of complex problems. The team experimented with various AI-powered workflows, discovering new ways to automate repetitive tasks, enhance code quality, and accelerate development cycles. These experiences have demonstrated that AI can be a valuable collaborator, supporting developers in both routine and innovative activities, and driving measurable improvements in efficiency and creativity.
 
+### AI-Assisted Architecture
+
+AI assistance empowers software architects to make better decisions by rapidly analyzing complex requirements, generating architectural diagrams, and evaluating design alternatives. With AI, architects can automate repetitive modeling tasks, identify potential risks early, and ensure alignment with best practices, resulting in more robust, scalable, and maintainable systems.
+
+#### Reverse Engineering
+
+When faced with a poorly documented and complex project, reverse engineering techniques become essential for understanding its structure and functionality. These approaches typically involve analyzing source code, inspecting system behavior, and utilizing automated tools to reconstruct architectural diagrams and workflows. By systematically breaking down the project into manageable components, developers can uncover hidden dependencies, clarify ambiguous logic, and create documentation that supports future maintenance and enhancement.
+
+Continue **[here](ai-architecture/reverse-engineering/README.md)**
+
+#### Replatforming
+
+Replatforming involves migrating legacy systems to modern platforms while preserving core functionality. Techniques for converting information gathered through reverse engineering include mapping legacy components to contemporary architectures, refactoring code for compatibility with new frameworks, and automating data migration. By leveraging architectural diagrams and dependency maps produced during reverse engineering, teams can systematically redesign workflows, replace outdated technologies, and ensure seamless integration with modern infrastructure. This approach minimizes disruption, reduces technical debt, and enables the adoption of scalable, maintainable solutions.
+
 ### AI-Assisted Development
 
 The integration of AI tools into the development process has revolutionized how code is written, reviewed, and maintained. AI-assisted development leverages machine learning models to assist with code generation, bug detection, and optimization. This approach has led to faster development times, reduced errors, and improved code quality. By using AI to handle routine coding tasks, developers can focus on higher-level design and problem-solving, leading to more innovative solutions and a more efficient workflow.
@@ -67,21 +81,6 @@ JavaScript, as a dominant language for web development, has benefited greatly fr
 
 Setting up AI tools requires careful consideration of the development environment and the specific needs of the project. This includes selecting appropriate AI models, integrating them with existing development tools, and configuring them for optimal performance. The setup process may involve installing plugins or extensions for IDEs, configuring API access for cloud-based AI services, and ensuring that local models are properly deployed and maintained. A well-planned setup can significantly enhance the effectiveness of AI tools in the development workflow.
 
-### Commands
-
-Python environment setup script for Linux and macOS:
-
-```bash
-source ./instpy.sh
-```
-
-#### MarkItDown MCP Server Setup
-
-- [Documentation](https://github.com/microsoft/markitdown?tab=readme-ov-file)
-
-```bash
-source ./markitdown.sh 
-```
 
 ## Prompt Engineering
 
