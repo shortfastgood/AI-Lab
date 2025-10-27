@@ -1,5 +1,11 @@
 {
-    "java.compile.nullAnalysis.mode": "automatic",
-    "java.configuration.updateBuildConfiguration": "interactive",
-    "workbench.colorTheme": "Solarized Light"
+  "chat.agent.enabled": true,
+  "chat.agent.maxRequests": 15,
+  "github.copilot.chat.agent.runTasks": true,
+  "chat.mcp.discovery.enabled": true,
+  "github.copilot.chat.agent.autoFix": true,
+  "chat.tools.autoApprove": false,
+  "java.compile.nullAnalysis.mode": "automatic",
+  "java.configuration.updateBuildConfiguration": "interactive",
+  "workbench.colorTheme": "Solarized Light"
 }
