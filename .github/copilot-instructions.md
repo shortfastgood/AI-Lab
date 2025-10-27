@@ -28,4 +28,4 @@ The architecture documentation is located in the following directories:
 ## Documentation
 The documentation is located in the following directories:
 - **docs:** place here general documentation
-- **docs/database:** place here database related documentation like UML and ER diagrams
+- **docs/design/database:** place here database related documentation like UML and ER diagrams
