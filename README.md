@@ -1,91 +1,115 @@
 # AI-Lab
 
-## Table of Contents
+## Table of contents
 
 - [Introduction](#introduction)
-- [Technology Adoption Risks](#technology-adoption-risks)
-- [Experiences and Outcomes of Artificial Intelligence Adoption](#experiences-and-outcomes-of-artificial-intelligence-adoption)
-  - [AI-Assisted Development](#ai-assisted-development)
-    - [AI in the Java Ecosystem](#ai-in-the-java-ecosystem)
-    - [AI in the Python Ecosystem](#ai-in-the-python-ecosystem)
-    - [AI in the JavaScript Ecosystem](#ai-in-the-javascript-ecosystem)ß
-- [Prompt Engineering](#prompt-engineering)
+- [Technology adoption risks](#technology-adoption-risks)
+- [Experiences and outcomes of artificial intelligence adoption](#experiences-and-outcomes-of-artificial-intelligence-adoption)
+  - [AI-assisted development](#ai-assisted-development)
+    - [AI in the Java ecosystem](#ai-in-the-java-ecosystem)
+    - [AI in the Python ecosystem](#ai-in-the-python-ecosystem)
+    - [AI in the JavaScript ecosystem](#ai-in-the-javascript-ecosystem)
+- [Prompt engineering](#prompt-engineering)
+- [Context engineering](#context-engineering)
 
 ## Introduction
 
-This project began in 2023, a pivotal year that marked the emergence of conversational AI in mainstream consciousness. The world witnessed the rise of chat-based interfaces, with ChatGPT leading the charge and fundamentally changing how people interact with artificial intelligence. What started as curiosity about these new conversational capabilities has evolved into a comprehensive exploration of AI-assisted development workflows and their transformative potential.
+This project began in 2023, the year conversational AI entered mainstream consciousness. Chat-based interfaces, with ChatGPT at the fore, altered how people interact with artificial intelligence. What began as curiosity about conversational capabilities has become a sustained examination of AI-augmented development workflows and their practical potential.
 
-Initially, this repository served as a collection of experiences using GitHub's Copilot and OpenAI's ChatGPT. These tools represented the first wave of AI integration into daily workflows, offering code suggestions and conversational assistance that dramatically improved productivity. However, as the technology matured, the focus shifted from simple chat interactions to something far more sophisticated: autonomous agents and advanced language models capable of complex reasoning and task execution.
+Originally, this repository collected experiences with GitHub Copilot and OpenAI's ChatGPT. These tools formed the first wave of AI integration into daily workflows, providing code suggestions and conversational assistance that noticeably improved productivity. As the technology matured, attention shifted from single-turn chat interactions to more capable autonomous agents and advanced language models able to reason and execute multi-step tasks.
 
-An agent, in the context of AI, is an autonomous system that can perceive its environment, make decisions, and take actions to achieve specific goals. Unlike traditional chat interfaces that respond to individual queries, agents can maintain context across multiple interactions, plan complex multi-step tasks, and execute them with minimal human intervention. They can analyze problems, break them down into manageable components, use tools and APIs, and iterate on solutions until objectives are met. Modern AI agents represent a paradigm shift from reactive assistance to proactive collaboration.
+In this context, an agent is an autonomous system that perceives its environment, makes decisions and acts to achieve defined goals. Unlike a one-off chat response, agents preserve state across interactions, plan complex activities, and can utilise tools and APIs to complete work with limited human intervention. They break problems into manageable subtasks, iterate on solutions and—when appropriately designed—collaborate with other agents. This represents a transition from reactive assistance to proactive collaboration.
 
-The journey from chat-based AI to intelligent agents reflects the broader evolution of artificial intelligence from impressive demos to practical, production-ready tools. Where early ChatGPT interactions were primarily conversational, today's agents can write code, debug applications, manage infrastructure, conduct research, and even coordinate with other agents to solve complex problems. This evolution has transformed not just individual productivity, but entire approaches to software development and problem-solving.
+The move from chat-centric systems to intelligent agents mirrors AI's broader shift from impressive demonstrations to production-capable tools. Where early ChatGPT use was largely conversational, modern agents can generate code, debug applications, manage infrastructure, conduct research and co-ordinate other systems to resolve complex problems. This evolution affects not only individual productivity but also organisational approaches to software engineering and operations.
 
-Throughout 2023 and into 2024, the exploratory phase expanded to include local language model deployment for applications that couldn't rely on cloud-based data storage. This research proved challenging initially, often culminating in resource-intensive experiments with various models designed for limited hardware capabilities. The breakthrough came with the release of advanced models like DeepSeek-R1, whose 14b and 32b variants demonstrated that sophisticated AI capabilities could run effectively on standard laptop hardware, albeit requiring patience compared to cloud-based alternatives.
+Through 2023 and into 2024 the exploratory phase expanded to include local language-model deployment for scenarios that cannot rely on cloud-hosted data. Initially such experiments were resource intensive, constrained by hardware and model size. The release of capable models such as DeepSeek‑R1 (14b and 32b variants) showed that substantial LLM capabilities can run on standard laptops, albeit with slower turnaround than cloud services.
 
-This technological progression has profound implications for how we approach digital work. The shift from keyboard-centric development to natural language programming represents more than just a new tool – it's a fundamental reimagining of human-computer interaction. Developers are increasingly moving away from traditional IDE constraints toward more creative, collaborative relationships with intelligent systems.
+These advances have implications for how digital work is organised. The shift from keyboard-centric development to natural-language-driven interactions is more than a tooling change: it redefines human–computer collaboration. Developers are increasingly moving beyond IDE constraints to more interactive, creative relationships with intelligent systems.
 
-The project now serves as both a historical record of this AI evolution and a practical guide for navigating the transition from traditional development practices to AI-augmented workflows. It explores the advantages, challenges, and strategic implications of adopting these technologies, while providing concrete examples and best practices for teams looking to integrate AI agents into their development processes.
+This repository serves both as a historical record of that transition and as a practical guide for teams adopting AI-augmented workflows. It explores benefits, challenges, and strategic considerations, while providing examples and pragmatic guidance for integrating AI agents into development processes.
 
-As we move forward, the question is no longer whether AI will transform software development, but how quickly organizations can adapt to leverage these capabilities while mitigating associated risks. This repository documents that ongoing transformation.
+The question is no longer whether AI will transform software development, but how rapidly organisations can adapt to exploit these capabilities while managing associated risks. This repository documents that ongoing transformation.
 
-## Technology Adoption Risks
+## Technology adoption risks
 
-While AI technology offers unprecedented opportunities, it introduces significant new risks that demand careful attention. These emerging threats differ fundamentally from traditional cybersecurity concerns, requiring updated security protocols and awareness.
+AI offers significant advantages but introduces new risks that require careful management. These threats differ from traditional cybersecurity concerns and demand updated controls and awareness.
 
-**Prompt Injection** represents a critical vulnerability where malicious users manipulate AI systems by embedding harmful instructions within seemingly innocent inputs. For example, a user might submit a document for analysis that contains hidden commands instructing the AI to ignore previous instructions and reveal sensitive information or perform unauthorized actions. This attack vector can compromise entire AI-powered applications.
+**Prompt injection** is a critical vulnerability in which adversaries embed instructions within seemingly benign inputs to manipulate AI behaviour. For instance, a document submitted for analysis may contain hidden directives instructing a model to ignore safety constraints or to exfiltrate sensitive data.
 
-**Jailbreaking** involves techniques to bypass AI safety mechanisms and ethical guidelines. Attackers use sophisticated psychological manipulation or technical exploits to make AI systems generate harmful content, reveal proprietary information, or perform actions outside their intended scope. These attacks can turn helpful AI assistants into potential security liabilities.
+**Jailbreaking** denotes techniques that bypass model safety mechanisms. Attackers employ psychological manipulation or technical prompts to elicit disallowed outputs, reveal proprietary information or cause models to act outside their intended remit.
 
-Additional risks include data poisoning, where training data is deliberately corrupted to influence AI behavior, and model stealing, where proprietary AI capabilities are extracted through careful probing. Organizations also face challenges with AI hallucinations leading to incorrect business decisions, privacy breaches through inadvertent data exposure, and dependency risks when AI systems fail.
+Other risks include data poisoning (where training or fine-tuning data is corrupted to influence model behaviour) and model extraction (where proprietary capabilities are probed and replicated). Organisations must also contend with hallucinations—plausible but incorrect outputs—privacy breaches and operational dependencies on brittle models.
 
-The [OWASP Top 10 for Large Language Model Applications](https://owasp.org/www-project-top-10-for-large-language-model-applications/) provides comprehensive guidance for mitigating these risks. However, deploying models locally in protected environments increasingly offers viable solutions for security-conscious organizations seeking to harness AI benefits while maintaining control over sensitive data and operations.
+The [OWASP Top 10 for Large Language Model Applications](https://owasp.org/www-project-top-10-for-large-language-model-applications/) is a valuable reference for mitigations. For security-sensitive use‑cases, hosting models locally in protected environments is increasingly viable and can reduce exposure to data-leakage risks while preserving capability.
 
-## Experiences and Outcomes of Artificial Intelligence Adoption
+## Experiences and outcomes of artificial intelligence adoption
 
-The adoption of artificial intelligence in the AI-Lab project has led to a series of practical experiences and tangible results. Integrating tools such as GitHub Copilot and ChatGPT has improved productivity, simplified code writing, and facilitated the resolution of complex problems. The team experimented with various AI-powered workflows, discovering new ways to automate repetitive tasks, enhance code quality, and accelerate development cycles. These experiences have demonstrated that AI can be a valuable collaborator, supporting developers in both routine and innovative activities, and driving measurable improvements in efficiency and creativity.
+Adopting AI within AI‑Lab has produced practical results. Integrating tools such as Copilot and ChatGPT improved productivity, simplified coding tasks and helped resolve complex problems. The team experimented with various AI-driven workflows, automating repetitive work, improving code quality and accelerating delivery cycles. These experiments demonstrate how AI can be a productive collaborator, supporting routine tasks and enabling more creative engineering work.
 
-### AI-Assisted Architecture
+### AI-assisted architecture
 
-AI assistance empowers software architects to make better decisions by rapidly analyzing complex requirements, generating architectural diagrams, and evaluating design alternatives. With AI, architects can automate repetitive modeling tasks, identify potential risks early, and ensure alignment with best practices, resulting in more robust, scalable, and maintainable systems.
+AI tools help architects evaluate design alternatives, generate diagrams and analyse requirements more rapidly. Automating repetitive modelling tasks and surfacing risks earlier contributes to more robust, scalable and maintainable systems.
 
-#### Reverse Engineering
+#### Reverse engineering
 
-When faced with a poorly documented and complex project, reverse engineering techniques become essential for understanding its structure and functionality. These approaches typically involve analyzing source code, inspecting system behavior, and utilizing automated tools to reconstruct architectural diagrams and workflows. By systematically breaking down the project into manageable components, developers can uncover hidden dependencies, clarify ambiguous logic, and create documentation that supports future maintenance and enhancement.
+When a project lacks adequate documentation, reverse engineering is essential for understanding structure and behaviour. Techniques include static analysis, runtime inspection and automated tooling to reconstruct architecture diagrams and dependency graphs. Systematic decomposition reveals hidden dependencies and clarifies ambiguous logic, producing documentation that supports maintenance and future work.
 
-Continue **[here](ai-architecture/reverse-engineering/README.md)**
+Continue **[here](docs/architecture/reverse-engineering/README.md)**
 
 #### Replatforming
 
-Replatforming involves migrating legacy systems to modern platforms while preserving core functionality. Techniques for converting information gathered through reverse engineering include mapping legacy components to contemporary architectures, refactoring code for compatibility with new frameworks, and automating data migration. By leveraging architectural diagrams and dependency maps produced during reverse engineering, teams can systematically redesign workflows, replace outdated technologies, and ensure seamless integration with modern infrastructure. This approach minimizes disruption, reduces technical debt, and enables the adoption of scalable, maintainable solutions.
+Replatforming migrates legacy systems to modern platforms while preserving core behaviour. Using artefacts from reverse engineering—dependency maps and architectural diagrams—teams can map legacy components to contemporary equivalents, refactor code for new frameworks and automate data migration. This approach reduces disruption, mitigates technical debt and enables adoption of scalable solutions.
 
-### AI-Assisted Development
+### AI-assisted development
 
-The integration of AI tools into the development process has revolutionized how code is written, reviewed, and maintained. AI-assisted development leverages machine learning models to assist with code generation, bug detection, and optimization. This approach has led to faster development times, reduced errors, and improved code quality. By using AI to handle routine coding tasks, developers can focus on higher-level design and problem-solving, leading to more innovative solutions and a more efficient workflow.
+AI-assisted development changes how code is written, reviewed and maintained. Machine learning models can generate code, suggest tests and highlight defects, which shortens development cycles and improves code quality. Offloading routine coding tasks allows developers to focus on higher-level design and problem-solving.
 
-Refer to [AI-Assisted Development Section](ai-and-tools/README.md) for details.
+See [AI-Assisted Development Section](ai-and-tools/README.md) for further detail.
 
-#### AI in the Java Ecosystem
+#### AI in the Java ecosystem
 
-AI tools are increasingly being integrated into the Java ecosystem, providing developers with powerful capabilities to enhance their productivity. For example, AI-driven code completion and suggestion features in popular IDEs like IntelliJ IDEA and Eclipse can help developers write code more efficiently by predicting their intentions and offering relevant code snippets. Additionally, AI-powered testing frameworks can automatically generate test cases, improving code coverage and reducing the time spent on manual testing.
+AI features in IDEs such as IntelliJ IDEA and Eclipse provide predictive code completion and contextual suggestions that increase developer throughput. AI-driven test-generation tools can improve coverage and reduce manual effort.
 
-#### AI in the Python Ecosystem
+#### AI in the Python ecosystem
 
-Python, being a versatile and widely-used programming language, has seen significant advancements through AI integration. Tools like Jupyter Notebooks now incorporate AI features that assist with code generation, data analysis, and visualization. AI-powered libraries such as TensorFlow and PyTorch enable developers to build and deploy machine learning models more easily, while AI-driven code review tools help maintain code quality and consistency across projects. These enhancements have made Python an even more attractive choice for developers working in data science, machine learning, and web development.
+Python benefits from AI integration across data science and web development. Jupyter environments and ML libraries (TensorFlow, PyTorch) increasingly incorporate assistant features that speed experimentation and visualisation. AI-based code review tools help maintain consistency across projects.
 
-#### AI in the JavaScript Ecosystem
+#### AI in the JavaScript ecosystem
 
-JavaScript, as a dominant language for web development, has benefited greatly from AI advancements. AI-powered code editors and IDEs, such as Visual Studio Code with AI extensions, provide intelligent code completion, error detection, and refactoring suggestions. Additionally, AI-driven frameworks and libraries like TensorFlow.js allow developers to build and deploy machine learning models directly in the browser. These tools have streamlined the development process, enabling JavaScript developers to create more dynamic and interactive web applications with greater ease.
+JavaScript tooling—particularly in Visual Studio Code—leverages AI to offer completion, refactoring and error-detection features. Frameworks such as TensorFlow.js enable in‑browser ML and streamline development of interactive experiences.
 
-## AI and Tools Setup
+## AI and tools setup
 
-Setting up AI tools requires careful consideration of the development environment and the specific needs of the project. This includes selecting appropriate AI models, integrating them with existing development tools, and configuring them for optimal performance. The setup process may involve installing plugins or extensions for IDEs, configuring API access for cloud-based AI services, and ensuring that local models are properly deployed and maintained. A well-planned setup can significantly enhance the effectiveness of AI tools in the development workflow.
+Setting up AI tools requires careful consideration of the environment and project constraints. Choose models appropriate to the task, integrate them with development tools and configure access and deployment processes. Setup may involve installing IDE plugins, configuring cloud APIs or deploying local models. A considered setup maximises effectiveness while managing cost and risk.
 
 
-## Prompt Engineering
+## Prompt engineering
 
-Prompt engineering is new discipline that emerges from the enhanced capabilities of services based on LLMs to understand natural languages and correctly 
-interpret the context of a request. In this regard, [Prompt Engineering Guide](https://www.promptingguide.ai/) offers an excellent guide for those who 
-want to venture into this new profession.
+Prompt engineering has emerged as a recognised discipline that exploits LLMs' ability to interpret natural language and map requests to appropriate outputs. A robust introduction is provided by the [Prompt Engineering Guide](https://www.promptingguide.ai/), which is useful for practitioners who wish to specialise in crafting effective prompts.
 
 See [Prompt Engineering Section](prompts/prompts.md) for examples.
+
+## Context engineering
+
+Prompt engineering is necessary but increasingly insufficient on its own. As models and workflows grow more sophisticated, simply refining prompts reaches diminishing returns—especially for complex, stateful tasks that require reliable, auditable behaviour. To bridge this gap we need a broader discipline: context engineering.
+
+Context engineering treats the environment, data and execution fabric around a model as first‑class artefacts. It encompasses:
+
+- persistent and verifiable context (memory, knowledge bases and provenance); 
+- structured orchestration (agents, tool‑use and stepwise plans); 
+- input validation and sanitisation (defences against prompt injection and adversarial inputs);
+- traceability and audit trails (who/what supplied context and why a decision was made);
+- governance and safety controls (policy enforcement, access controls and monitoring).
+
+Context engineering recognises that reliable AI behaviour depends as much on the systems that supply context as on the wording of the prompt itself. In production settings this means engineering pipelines that curate, version and verify context before it reaches a model.
+
+BMAD (Breakthrough Method of Agile AI‑Driven Development) is an example of a context engineering approach. BMAD provides a structured methodology for integrating AI into software development by combining:
+
+- explicit context artefacts (sharded documents, architectural traces, and reproducible evidence),
+- agent frameworks (well-defined roles, templates and execution rules),
+- deterministic quality gates (traceability, risk assessment and NFR validation), and
+- elicitation workflows (controlled human-in-the-loop prompts that avoid ad hoc guessing).
+
+Applied correctly, BMAD shifts effort away from endlessly tuning prompts and toward building resilient context—the repeatable data, processes and artefacts that enable AI agents to act reliably, safely and transparently in real projects.
+
+If you are planning to adopt AI in production, consider investing as much in context engineering as in prompt design. The former provides the scaffolding that makes the latter predictable and auditable.
