@@ -4,8 +4,6 @@ The tool by itself is of limited use and often causes significant frustration. T
 
 The methodology used is more important than any tool. Without discipline and a clear vision of requirements and architecture, the project will go off track. The consequences are a loss of trust in the technology and poor practical results. The second priority is a language model suitable for the purpose. Third are the instructions we give to the AI, and only lastly comes the tool itself.
 
-
-
 ## BMAD Method
 
 I chose the Breakthrough Method of Agile AI-Driven Development because it is well-structured. After four versions, it is mature enough to be used in a real project. It does not require using all its parts and is easily adaptable. BMAD is a good example of context engineering.
