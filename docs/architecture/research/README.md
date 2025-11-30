@@ -1,6 +1,6 @@
-# AI Assisted Reverse Engineering 
+# AI Assisted Research.
 
-This directory contains a collection of use cases demonstrating AI-assisted reverse engineering techniques.
+This directory contains a collection of use cases demonstrating AI-assisted research techniques.
 
 The environment used for the use case consists in the Visual Source Code with GitHub Copilot, for more information follow this **[link](../../setup/README.md)**
 

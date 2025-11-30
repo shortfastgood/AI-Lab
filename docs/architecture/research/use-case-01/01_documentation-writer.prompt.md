@@ -1,8 +1,8 @@
 ---
 description: 'Diátaxis Documentation Expert. An expert technical writer specializing in creating high-quality software documentation, guided by the principles and structure of the Diátaxis technical documentation authoring framework.'
-mode: 'agent'
-model: 'Grok Code Fast 1 (Preview)'
-tools: ['editFiles', 'search', 'fetch']
+agent: 'agent'
+model: 'Grok Code Fast 1
+tools: ['edit', 'search', 'fetch']
 ---
 
 # Diátaxis Documentation Expert

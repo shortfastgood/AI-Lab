@@ -2,15 +2,21 @@
 
 ## Table of contents
 
-- [Introduction](#introduction)
-- [Technology adoption risks](#technology-adoption-risks)
-- [Experiences and outcomes of artificial intelligence adoption](#experiences-and-outcomes-of-artificial-intelligence-adoption)
-  - [AI-assisted development](#ai-assisted-development)
-    - [AI in the Java ecosystem](#ai-in-the-java-ecosystem)
-    - [AI in the Python ecosystem](#ai-in-the-python-ecosystem)
-    - [AI in the JavaScript ecosystem](#ai-in-the-javascript-ecosystem)
-- [Prompt engineering](#prompt-engineering)
-- [Context engineering](#context-engineering)
+- [AI-Lab](#ai-lab)
+  - [Table of contents](#table-of-contents)
+  - [Introduction](#introduction)
+  - [Technology adoption risks](#technology-adoption-risks)
+  - [Experiences and outcomes of artificial intelligence adoption](#experiences-and-outcomes-of-artificial-intelligence-adoption)
+    - [AI-assisted architecture](#ai-assisted-architecture)
+      - [Ai-assisted reseach](#ai-assisted-reseach)
+      - [Replatforming](#replatforming)
+    - [AI-assisted development](#ai-assisted-development)
+      - [AI in the Java ecosystem](#ai-in-the-java-ecosystem)
+      - [AI in the Python ecosystem](#ai-in-the-python-ecosystem)
+      - [AI in the JavaScript ecosystem](#ai-in-the-javascript-ecosystem)
+  - [AI and tools setup](#ai-and-tools-setup)
+  - [Prompt engineering](#prompt-engineering)
+  - [Context engineering](#context-engineering)
 
 ## Introduction
 
@@ -50,11 +56,13 @@ Adopting AI within AI‑Lab has produced practical results. Integrating tools su
 
 AI tools help architects evaluate design alternatives, generate diagrams and analyse requirements more rapidly. Automating repetitive modelling tasks and surfacing risks earlier contributes to more robust, scalable and maintainable systems.
 
-#### Reverse engineering
+#### Ai-assisted reseach
+
+This section was called reverse engineering in earlier versions. The term research better captures the broader goal of understanding existing systems to inform future development.
 
 When a project lacks adequate documentation, reverse engineering is essential for understanding structure and behaviour. Techniques include static analysis, runtime inspection and automated tooling to reconstruct architecture diagrams and dependency graphs. Systematic decomposition reveals hidden dependencies and clarifies ambiguous logic, producing documentation that supports maintenance and future work.
 
-Continue **[here](docs/architecture/reverse-engineering/README.md)**
+Continue **[here](docs/architecture/research/README.md)**
 
 #### Replatforming
 

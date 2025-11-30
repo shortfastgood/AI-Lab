@@ -1,6 +1,6 @@
 ---
 description: New prompt created from chat session
-mode: agent
+agent: agent
 tools: ['codebase', 'usages', 'vscodeAPI', 'think', 'problems', 'changes', 'testFailure', 'terminalSelection', 'terminalLastCommand', 'openSimpleBrowser', 'fetch', 'findTestFiles', 'searchResults', 'githubRepo', 'extensions', 'browser_fill_form', 'browser_tabs', 'todos', 'editFiles', 'runNotebooks', 'search', 'new', 'runCommands', 'runTasks']
 model: Grok Code Fast 1 (Preview)
 ---
