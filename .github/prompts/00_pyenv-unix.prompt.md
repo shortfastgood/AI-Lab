@@ -1,8 +1,8 @@
 ---
 description: Generate a prompt for pyenv installation and setup for Linux and macOS.
-mode: agent
-model: Grok Code Fast 1 (Preview)
-tools: ['createFile', 'createDirectory', 'editFiles', 'search', 'runCommands', 'runTasks', 'fetch', 'todos', 'getPythonEnvironmentInfo', 'getPythonExecutableCommand', 'installPythonPackage', 'configurePythonEnvironment']
+agent: dev
+model: Grok Code Fast 1
+tools: ['runCommands', 'runTasks', 'edit/createFile', 'edit/createDirectory', 'edit/editFiles', 'search', 'todos', 'problems', 'fetch']
 ---
 1. Create or update the Linux and macOS compatible script instpy.sh to install ai-development/ai-python/.venv. 
 2. The script assumes python or python3 is already available on the system. Simply try to use python3 first, then fallback to python.
