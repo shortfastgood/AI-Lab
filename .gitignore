@@ -53,3 +53,10 @@ target/
 nbproject
 Thumbs.db
 .aider*
+
+# Node.js
+node_modules/
+npm-debug.log
+yarn-error.log
+yarn-debug.log
+package-lock.json
