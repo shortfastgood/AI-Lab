@@ -1,0 +1,24 @@
+# Maggio 2026 - GitHub Copilot Bye Bye
+Il GitHub Copilot è stato l'antesignano di tutta una serie agenti che trasformano un prompt in una risposta, in codice compilabile o in una azione. La lista, a partire del 2023, è lunghissima. Sono rimaso fedele a questa mia prima scelta malgrado io usi parallelamente anche Claude e Codex. Il Copilot ha avuto un discreto successo ed ora ne è vittima.
+
+Finora, per i piani a pagamento, i costi si calcolavano per richiesta, con il primo di giugno si calcoleranno in Credits una unità astratta che non permette piÛ di valutare velocemente e correttamente i costi.
+
+È evidente che la fatturazione in base alle richieste non sia più sostenibile, ma mascherare i costi API dietro una unita astratta è un'operazione assai discutibile. Il calcolo dei costi AI API è comunque molto aleatorio perchè dipende dal modello e dall'uso che ne facciamo. Con ogni nuovo modello dobbiamo aspettarci un incremento dei costi, perchè è capitato abbastanza regolarmente. Inoltre dobbiamo forzatamente seguire l'evoluzione dei modelli perchè essi vengono scartati piuttosto velocemente. Questo impedisce la creazione di un ambiente stabile sia dal punto di vista operativo che da quello economico. Tutto questo vale anche per uno qualsiasi dei prodotti concorrenti.
+
+Questa è un'evoluzione negativa perchè oltre ad essere vieppiù costosa crea una dipendenza assoulta dai grandi centri AI. Questi centri richiedono una enormità di risorse ed è giä successo che intere comunità si sono trovate a corto di energia o acqua a causa loro. Ad essere accentuati sono poi i rischi legati a disfunzioni su vasta scala come è già capitato per il Cloud. Se ChatGPT non risponde già oggi si scatena il panico.
+
+Io ho deciso di non seguire questa evoluzione e fare capo a dei modelli che funzionano localmente. Serve un PC adatto: ad esempio un Macbook Pro M4 Max con almeno 64 GB di memoria, meglio se sono 128. Sto usando il sistema più facile da installare e gestire che ho trovato: la base resta VS Code con GitHub Copilot, la parte mancante è fornita dal progetto Ollama che collega il modello al Copilot.
+
+C'è una vasta scelta di modelli che potrebbero andare bene, ma il mio traguardo è il poter lavorare in modo simile a quanto fatto finora con i grandi modelli. Ho evtato di scegliere in base ad un benchmark di cui non ho un'alta opinione, alla base della mia valutazione c'è il progetto **one-prompt-apps** (https://github.com/shortfastgood/one-prompt-apps/tree/main) il cui scopo principale è quello di valutare, con un singolo prompt, le capacità di un modello d'intelligenza artificiale. La domanda è sempre quella: il risultato è un'applicazione utilizzabile con un discreto design ?
+
+Per cominciare mi sono affidato ad un modello proposto da Alibaba otto mesi fa: il **Qwen3-Coder:30b**. Le caratteristiche sono **19GB**, finestra di contesto da **256k**, architettura **qwen3moe**, parametri **30.5B** e qunatizzazione **Q4_K_M**. Questo modello avrebbe potuto assicurare la stabilità dell'ambiente produttivo da ottobre 2025 a tutt'oggi.
+
+Alla prova dei fatti il Qwen3-Coder ha generato l'applicazione con tutti le sue componenti già con il primo prompt. La rapidità del modello nel compiere l'operazione è sorprendente, si tratta della peggiore prestazione di tutte quelle fate con i grandi modelli, ma il distacco è molto contenuto.
+
+Il design del gioco è semplice e pulito, assolutamente competitivo con quello generato da Claude Sonnet. Il codice Javascript è meno raffinato di quello di Claude Sonnet, ma le differenze sono trascurabili.
+
+Il Qwen3-Coder mostra qualche limite per quanto riguarda la funzionalità del programma: sono serviti sei diversi prompt per ottenere una versione veramente funzionante. Il lato positivo è che segnalata un disfunzione l'agente ha corretto immediatamente altri tre errori e a effettuato un test per assicurarsi che le correzioni agissero. Quello negativo è che le risposte arrivano, man mano sempre più lentamente. Il degrado della sessione è notevole. Per ripristinare la rapidità d'esecuzione è necessario resettare Ollama il che può anche significare chiudere il VS Code per poi riaprirlo.
+
+Tirando le somme un risultato di tutto rispetto a costo zero malgrado qualche disagio. Da un punto di vista dell'efficienza la versione di Tetris ottenuta con Claude Sonnet ha preso circa 90 minuti. La versione di Qwen3-Coder mi ha impegnato per circa 4 ore. In entrambi i casi verifiche e test compresi. Dovendo programmare una simile applicazione Tetris usando la tastiera e un IDE classica si devono mettere in conto almeno tre giorni.
+
+Questa prima esperienza sottoline come si possibile sottrarsi alla logica dei grandi provider, dove ogni progresso della mia azienda può essere fatto proprio dal provider che poi lo distribuirà, a pagamento, a tuti i clienti. Se mi sottraggo invece i miei progressi e le mie idee restano di mia proprietà e mi permettono di distinguermi dai concorrenti.
