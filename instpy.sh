@@ -34,7 +34,7 @@ fi
 echo "Python version is sufficient."
 
 # Venv path
-VENV_PATH="./ai-development/ai-python/.venv"
+VENV_PATH="./development/python/.venv"
 
 # Check if venv exists
 if [ ! -d "$VENV_PATH" ]; then
@@ -53,7 +53,7 @@ echo "Upgrading pip..."
 pip install --upgrade pip
 
 # Install requirements
-REQ_FILE="ai-development/ai-python/requirements.txt"
+REQ_FILE="development/python/requirements.txt"
 if [ -f "$REQ_FILE" ]; then
     echo "Installing packages from $REQ_FILE..."
     pip install -r "$REQ_FILE"

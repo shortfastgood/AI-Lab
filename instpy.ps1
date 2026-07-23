@@ -30,7 +30,7 @@ if ($versionOutput -match "Python (\d+)\.(\d+)") {
 Write-Host "Python version is $major.$minor, which is acceptable."
 
 # Venv path
-$venvPath = "ai-development/ai-python/.venv"
+$venvPath = "development/python/.venv"
 
 # Create directories if needed
 $venvDir = Split-Path $venvPath
@@ -67,7 +67,7 @@ if ($LASTEXITCODE -ne 0) {
 }
 
 # Install requirements
-$reqPath = "ai-development/ai-python/requirements.txt"
+$reqPath = "development/python/requirements.txt"
 if (Test-Path $reqPath) {
     Write-Host "Installing packages from $reqPath..."
     pip install -r $reqPath
