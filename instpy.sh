@@ -1,6 +1,6 @@
 #!/bin/bash
 # instpy.sh: Install and set up Python virtual environment for ai-development/ai-python
-# Requirements: Python 3.12 or higher must be installed on the system
+# Requirements: Python 3.14 or higher must be installed on the system
 
 set -e  # Exit on error
 
@@ -12,7 +12,7 @@ if command -v python3 &> /dev/null; then
 elif command -v python &> /dev/null; then
     PYTHON_CMD="python"
 else
-    echo "Error: Neither python3 nor python found. Please install Python 3.12 or higher."
+    echo "Error: Neither python3 nor python found. Please install Python 3.14 or higher."
     exit 1
 fi
 
@@ -26,8 +26,8 @@ echo "Python version: $PYTHON_VERSION"
 MAJOR=$(echo $PYTHON_VERSION | cut -d. -f1)
 MINOR=$(echo $PYTHON_VERSION | cut -d. -f2)
 
-if [ "$MAJOR" -lt 3 ] || ([ "$MAJOR" -eq 3 ] && [ "$MINOR" -lt 12 ]); then
-    echo "Error: Python version $PYTHON_VERSION is less than 3.12. Please upgrade Python."
+if [ "$MAJOR" -lt 3 ] || ([ "$MAJOR" -eq 3 ] && [ "$MINOR" -lt 14 ]); then
+    echo "Error: Python version $PYTHON_VERSION is less than 3.14. Please upgrade Python."
     exit 1
 fi
 
