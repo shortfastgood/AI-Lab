@@ -7,10 +7,25 @@ Setting up AI tools requires careful consideration of the environment and projec
 I have decided to prioritise the use of local models and to keep the use of models from online providers to the bare minimum.
 Independence and discretion must take priority; speed and completeness of the result matter only if the work done locally is severely limited or of poor quality.
 
+- [Scripts](#scripts)
+  - [Environment](#environment)
 - [Tools](#tools)
   - [Mark It Down](#markitdown)
+  - [MLXGen](../tools/mlxgen.md)
   - [NodeJS](#nodejs)
   - [Python](#python)
+
+## Scripts
+
+Scripts are used primarily during development to implement repetitive processes, individual functions, or tests.
+
+### Environment
+
+| Name       | OS            | Intepreter  | Description |
+|------------|---------------|-------------|-------------|
+| instmlx.sh | macOS         | Bash        | Installs the Python virtual environment for MLX scripts      |
+| instpy.ps1 | Windows       | Powershell  | Installs the Python virtual environment for portable scripts |
+| instpy.sh  | Linux & macOS | Bash        | Installs the Python virtual environment for portable scripts | 
 
 ## Tools
 
