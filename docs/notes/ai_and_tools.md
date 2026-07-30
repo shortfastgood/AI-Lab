@@ -10,6 +10,7 @@ Independence and discretion must take priority; speed and completeness of the re
 - [Scripts](#scripts)
   - [Environment](#environment)
 - [Tools](#tools)
+  - [ComfyUI](../tools/comfyui.md)
   - [Mark It Down](#markitdown)
   - [MLXGen](../tools/mlxgen.md)
   - [NodeJS](#nodejs)
@@ -23,6 +24,7 @@ Scripts are used primarily during development to implement repetitive processes,
 
 | Name       | OS            | Intepreter  | Description |
 |------------|---------------|-------------|-------------|
+| comfyui.sh | Linux & macOS | Bash.       | Starts ComfyUI server in a dedicated environment |
 | instmlx.sh | macOS         | Bash        | Installs the Python virtual environment for MLX scripts      |
 | instpy.ps1 | Windows       | Powershell  | Installs the Python virtual environment for portable scripts |
 | instpy.sh  | Linux & macOS | Bash        | Installs the Python virtual environment for portable scripts | 
