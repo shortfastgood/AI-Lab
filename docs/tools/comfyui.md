@@ -34,7 +34,9 @@ To more easily add models to ComfyUI it is recommended to install the **huggingf
     user@macbook % export HF_HOME="$HOME/gitroot/ComfyUI/.cache/huggingface"
     user@macbook % pip install huggingface_hub
 
-### SDLX
+### SDXL
+
+#### Models
 
 Caffeinate prevents the download from being interrupted if the user leaves their workstation for an extended period. Downloads the base model.
 
@@ -50,3 +52,14 @@ Download the refinement model.
       sd_xl_refiner_1.0.safetensors\
       --local-dir ./models/checkpoints/
 
+#### Test
+
+- Start or restart ComfyUI 
+- Connect to http://127.0.0.1:8188 with the WEB browser.
+- Select the Templates icon.
+- Select generation type image.
+- Search for SDXL
+- Select the SDXL Simple template
+- Press the run button.
+
+<img src="../../test/data/image/ComfyUI_SDXL_simple.png" width=720>
