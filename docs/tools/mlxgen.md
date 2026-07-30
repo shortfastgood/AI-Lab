@@ -32,6 +32,12 @@ If the model doesn't fit in the available memory may be quantized to reduce the 
 
 ## Image Generation
 
+This is merely an example to demonstrate the procedure; the model and parameters should be adapted to the specific case.
+
+    (.venv) user@macbook % caffeinate -i mlxgen download --model black-forest-labs/FLUX.2-klein-4B
+
+The number of steps depends on the model and its generative quality. The general rule is that more steps yield a better result; however, each step increases execution time and, beyond a certain point, the model is no longer able to improve the output.
+
     (.venv) user@macbook % mlxgen generate \
                              --model black-forest-labs/FLUX.2-klein-4B \
                              --prompt "A cozy cabin in the woods at sunset,\
