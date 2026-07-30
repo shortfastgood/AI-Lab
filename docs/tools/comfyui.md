@@ -29,16 +29,24 @@ Check if MPS is available.
 
 ## Configuration
 
-Per aggiungere più facilmente modelli a ComfyUI è consigliabile aggiungere il pacchetto **huggingface_hub**.
+To more easily add models to ComfyUI it is recommended to install the **huggingface_hub** package.
 
-    user@macbook % export HF_HOME="$HOME/ComfyUI/.cache/huggingface"
+    user@macbook % export HF_HOME="$HOME/gitroot/ComfyUI/.cache/huggingface"
     user@macbook % pip install huggingface_hub
 
 ### SDLX
 
-Caffeinate impedisce l'interruzione del download nel caso l'utente lasci la postazione di lavoro per lungo tempo
+Caffeinate prevents the download from being interrupted if the user leaves their workstation for an extended period. Downloads the base model.
 
      user@macbook % caffeinate -i\
       hf download stabilityai/stable-diffusion-xl-base-1.0\
       sd_xl_base_1.0.safetensors\
       --local-dir ./models/checkpoints/
+
+Download the refinement model.
+
+     user@macbook % caffeinate -i\
+      hf download stabilityai/stable-diffusion-xl-refiner-1.0\
+      sd_xl_refiner_1.0.safetensors\
+      --local-dir ./models/checkpoints/
+
