@@ -2,6 +2,8 @@
 
 ## SDXL Simple image Generation
 
+     user@macbook % cd ~/gitroot/ComfyUI
+
 ## Required Models
 
 Caffeinate prevents the download from being interrupted if the user leaves their workstation for an extended period. Downloads the base model.
