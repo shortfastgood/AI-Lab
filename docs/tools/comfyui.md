@@ -15,8 +15,29 @@
 - [Workflows](comfyui-workflows.md)
   - [SDXL Simple Image Generation](comfyui-workflows.md#sdxl-simple-image-generation)
 
-## Multiple Angles
+## Multiple Angles Workflow
 
+This workflow is described by [SOTAI on YouTube](https://www.youtube.com/watch?v=4pm1Fp8lt6I); follow their instructions to obtain the complete workflow.
+
+### Custom Nodes
+
+#### ComfyUI-qwenmultiangle
+
+"*A ComfyUI custom node for 3D camera angle control. Provides an interactive Three.js viewport to adjust camera angles and outputs formatted prompt strings for multi-angle image generation.*"
+
+    user@macbook % cd ~/gitroot/ComfyUI/custom_nodes
+    user@macbook % git clone https://github.com/jtydhr88/ComfyUI-qwenmultiangle
+
+#### KJNodes for ComfyUI
+
+"*At this point pretty random collection of utility, model optimization and QoL nodes, while keeping dependencies at minimum.*"
+
+    user@macbook % cd ~/gitroot/ComfyUI/custom_nodes
+    user@macbook % git clone https://github.com/kijai/ComfyUI-KJNodes
+    user@macbook % cd ComfyUI-KJNodes
+    user@macbook % pip install -r requirements.txt
+
+### Required Models
 
 
 
