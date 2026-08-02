@@ -18,10 +18,9 @@ The tool defaults to Huggingface for model download, for large downloads and/or 
 
 If the model doesn't fit in the available memory may be quantized to reduce the size and/or to speed up the execution.
 
-    (.venv) user@macbook % mlxgen prepare \ 
-                             --model Qwen/Qwen-Image-Edit-2511\
-                             --path ./model/qwen-image-edit-2511-mlx-4bit\
-                             --quantize 4
+    % mlxgen prepare --model Qwen/Qwen-Image-Edit-2511\
+                     --path ./model/qwen-image-edit-2511-mlx-4bit\
+                     --quantize 4
 
 ## Models
 
@@ -38,32 +37,31 @@ This is merely an example to demonstrate the procedure; the model and parameters
 
 The number of steps depends on the model and its generative quality. The general rule is that more steps yield a better result; however, each step increases execution time and, beyond a certain point, the model is no longer able to improve the output.
 
-    (.venv) user@macbook % mlxgen generate \
-                             --model black-forest-labs/FLUX.2-klein-4B \
-                             --prompt "A cozy cabin in the woods at sunset,\
-                                       warm light from windows, pine trees" \
-                             --width 1280 \
-                             --height 1024 \
-                             --steps 4 \
-                             --seed 42 \
-                             --output ./test/tmp/cabin.png
+    % mlxgen generate --model black-forest-labs/FLUX.2-klein-4B \
+                      --prompt "A cozy cabin in the woods at sunset, warm light from windows, pine trees" \
+                      --width 1280 \
+                      --height 1024 \
+                      --steps 4 \
+                      --seed 42 \
+                      --output ./test/tmp/cabin.png
 
 - The model 1. is very fast: it generated the image below in 14 seconds on an M4 Max MacBook with 64GB of memory. The details are also very well defined with only a few steps (4).
 
-<img src="../../test/data/image/cabin-flux.2-klein-4b.png" width=720>
+<img src="../../docs/images/cabin-flux.2-klein-4b.png" width=720>
 
 ## Image Edit
 
-    (.venv) user@macbook % mlxgen generate \
-                             --image ./test/data/image/1955-chevrolet-bel-air-2-door-hardtop.jpeg
-                             --model black-forest-labs/FLUX.2-klein-4B \
-                             --prompt "Replace the teal color of the car in the original picture with coral red" \
-                             --steps 4 \
-                             --seed 456 \
-                             --task edit
-                             --output ./test/tmp/coral-red-chewrolet-bel-air.png
+    % mlxgen generate --image ./test/data/image/1955-chevrolet-bel-air-2-door-hardtop.jpeg
+                      --model black-forest-labs/FLUX.2-klein-4B \
+                      --prompt "Replace the teal color of the car in the original picture with coral red" \
+                      --steps 4 \
+                      --seed 456 \
+                      --task edit
+                      --output ./test/tmp/coral-red-chewrolet-bel-air.png
 
 - The model 1. is very fast: it generated the image below in 19 seconds on an M4 Max MacBook with 64GB of memory. The details are also very well defined with only a few steps (4).
 
 <img src="../../test/data/image/1955-chevrolet-bel-air-2-door-hardtop.jpeg" width=360>
-<img src="../../test/data/image/coral-red-chewrolet-bel-air.png" width=360>
+original picture
+<img src="../../docs/images/1955_chevrolet_bel_air_00.png" width=360>
+modified picture
