@@ -39,7 +39,35 @@ This workflow is described by [SOTAI on YouTube](https://www.youtube.com/watch?v
 
 ### Required Models
 
+    user@macbook % cd ~/gitroot/ComfyUI
 
+#### UNET
+
+    user@macbook % caffeinate -i\
+                   hf download hf://Comfy-Org/Qwen-Image-Edit_ComfyUI/split_files/diffusion_models/qwen_image_edit_2511_bf16.safetensors\
+                     --localdir ./models/unet
+
+#### LORA
+
+    user@macbook % caffeinate -i\
+                   hf download hf://lightx2v/Qwen-Image-Edit-2511-Lightning/Qwen-Image-Edit-2511-Lightning-4steps-V1.0-bf16.safetensors\
+                     --localdir ./models/loras
+
+    user@macbook % caffeinate -i\
+                   hf download hf://fal/Qwen-Image-Edit-2511-Multiple-Angles-LoRA/qwen-image-edit-2511-multiple-angles-lora.safetensors\
+                     --localdir ./models/loras
+
+#### VAE
+
+    user@macbook % caffeinate -i\
+                   hf download hf://Comfy-Org/Qwen-Image_ComfyUI/split_files/vae/qwen_image_vae.safetensors\
+                     --localdir ./models/vae
+
+#### TEXT ENCODERS
+
+    user@macbook % caffeinate -i\
+                   hf download hf://Comfy-Org/Qwen-Image_ComfyUI/split_files/text_encoders/qwen_2.5_vl_7b_fp8_scaled.safetensors\
+                     --localdir ./models/text_encoders
 
 ## References
 
