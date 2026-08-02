@@ -2,23 +2,17 @@
 
 ## SDXL Simple image Generation
 
-     user@macbook % cd ~/gitroot/ComfyUI
+     % cd ~/gitroot/ComfyUI
 
 ## Required Models
 
 Caffeinate prevents the download from being interrupted if the user leaves their workstation for an extended period. Downloads the base model.
 
-     user@macbook % caffeinate -i\
-      hf download stabilityai/stable-diffusion-xl-base-1.0\
-      sd_xl_base_1.0.safetensors\
-      --local-dir ./models/checkpoints/
+     % caffeinate -i hf download stabilityai/stable-diffusion-xl-base-1.0/sd_xl_base_1.0.safetensors --local-dir ./models/checkpoints/
 
 Download the refinement model.
 
-     user@macbook % caffeinate -i\
-      hf download stabilityai/stable-diffusion-xl-refiner-1.0\
-      sd_xl_refiner_1.0.safetensors\
-      --local-dir ./models/checkpoints/
+     % caffeinate -i hf download stabilityai/stable-diffusion-xl-refiner-1.0\sd_xl_refiner_1.0.safetensors --local-dir ./models/checkpoints/
 
 ## Flow
 
