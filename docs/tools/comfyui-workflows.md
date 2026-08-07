@@ -24,4 +24,4 @@ Download the refinement model.
 - Select the SDXL Simple template
 - Press the run button.
 
-<img src="../../test/data/image/ComfyUI_SDXL_simple.png" width=720>
+<img src="../../docs/images/ComfyUI_SDXL_simple.png" width=720>
