@@ -2,10 +2,10 @@
 
 Local installation of ComfyUI with a dedicated workspace environment.
 
-## macOS
+## Basic Installation
 
     % cd gitroot
-    % git clone https://github.com/comfyanonymous/ComfyUI.git\
+    % git clone https://github.com/comfyanonymous/ComfyUI.git
     % cd ComfyUI
 
 Dedicated Python workspace environment.
@@ -25,3 +25,13 @@ Now install ComfyUI’s own dependencies.
 Check if MPS is available.
 
     % python -c "import torch; print('MPS available:', torch.backends.mps.is_available())"
+
+## Manager Installalation
+
+The manager is optional.
+
+    % pip install -r manager_requirements.txt
+
+## Start
+
+Use the the comfyui.sh script to start ComfyUI, the script expects ComfyUI is instaled in the folder **~/gitroot/ComfyUI** 
