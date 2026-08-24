@@ -11,7 +11,7 @@ Io ho deciso di non seguire questa evoluzione e fare capo a dei modelli che funz
 
 C'è una vasta scelta di modelli che potrebbero andare bene, ma il mio traguardo è il poter lavorare in modo simile a quanto fatto finora con i grandi modelli. Ho evtato di scegliere in base ad un benchmark di cui non ho un'alta opinione, alla base della mia valutazione c'è il progetto **one-prompt-apps** (https://github.com/shortfastgood/one-prompt-apps/tree/main) il cui scopo principale è quello di valutare, con un singolo prompt, le capacità di un modello d'intelligenza artificiale. La domanda è sempre quella: il risultato è un'applicazione utilizzabile con un discreto design ?
 
-Per cominciare mi sono affidato ad un modello proposto da Alibaba otto mesi fa: il **Qwen3-Coder:30b**. Le caratteristiche sono **19GB**, finestra di contesto da **256k**, architettura **qwen3moe**, parametri **30.5B** e qunatizzazione **Q4_K_M**. Questo modello avrebbe potuto assicurare la stabilità dell'ambiente produttivo da ottobre 2025 a tutt'oggi.
+Per cominciare mi sono affidato ad un modello proposto da Alibaba otto mesi fa: il **Qwen3-Coder:30b**. Le caratteristiche sono **19GB**, finestra di contesto da **256k**, architettura **qwen3moe**, parametri **30.5B** e quantizzazione **Q4_K_M**. Questo modello avrebbe potuto assicurare la stabilità dell'ambiente produttivo da ottobre 2025 a tutt'oggi.
 
 Alla prova dei fatti il Qwen3-Coder ha generato l'applicazione con tutti le sue componenti già con il primo prompt. La rapidità del modello nel compiere l'operazione è sorprendente, si tratta della peggiore prestazione di tutte quelle fate con i grandi modelli, ma il distacco è molto contenuto.
 
