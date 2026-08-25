@@ -1,0 +1,7 @@
+Io mi rivolgo principalmente a degli utenti che quella RAM la comprano comunque, perché è necessaria anche per altri scopi, o per coloro che non possono usare modelli remoti per dei chiari limiti contattuali. Per casi particolari e per l'utente casuale il modello remoto resta un'ottima scelta se si accettano le condizioni d'esercizio.
+
+La mia filosofia è: perchè usare un tool che necessita enormi risorse quando posso farlo localmente con uno molto più piccolo e più rapidamente.
+
+Ad esempio posso sostituire il colore della carrozzeria di una Chevrolet Belair, in una immagine 1791x703, in 14 secondi usando un modello quantizzato di Black Forset Labs che necessita 13GB di RAM. Nessun modello remoto può garantire la stessa prestazione a causa dei tempi di latenza. La qualità del risultato è superiore a quella del modello generico perché il modello locale è specializzato nell'elaborazione di immagini.
+
+Di operazioni semplici come queste ne facciamo migliaia e disponendo di un MacBook Pro M4 Max con 64GB ho scoperto di poter essere parzialmente indipendente dai modelli con un effettivo risparmio. Anche se il prossimo modello fosse più grande io posso comunque usare quello attuale dato che soddisfa pienamente le mie necessità. 
