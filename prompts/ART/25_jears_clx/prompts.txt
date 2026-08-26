@@ -1,0 +1,24 @@
+Suitcase 1
+
+Original:
+Una valigia [rossa, manico e bordo neri] aperta sul pavimento [piastrelle bianche] e da cui spontano alcuni oggetti: 
+un ATM [metallo grigio scuro levigato a specchio], un registratore di cassa [modello vintage in colo ottone], 
+un coniglio [di ciccolato scuro] e un tablet computer [vintage anni '90]. 
+Sullo sfondo la parete di una stanza [mattoni grandi dipinti di bianco].
+
+Translation by Deepseek R14b:
+A suitcase [red, black handle and trim] open on the floor [white tiles], from which some objects protrude: 
+an ATM [dark gray metal polished to mirror finish], a cash register [vintage model in copper tone], 
+a rabbit [dark chocolate color], and a tablet computer [vintage '90s]. In the background, the wall of a room 
+[large white-painted bricks]
+
+
+Suitcase 2
+
+Una grande valigia [dei colori dell'arcobaleno] aperta sul pavimento [piastrelle bianche] da cui spunta 
+un PC [schermo EIZO con tubo catodico che sormonta la scatola della CPU, usare colori grigi e blu] 
+che mostra una pagina WEB [sfondo bianco e, nell'angolo in alto a destra la scritta Credit-Suisse in blu molto scuro]
+e una pila di cartelle [ogni una di uno dei colori dell'arcobaleno, titolo di sei caratteri in nero] contenenti fogli bianchi.
+Sul davanti una stella marina [cinque punte slanciate, di colore arancione molto chiaro tenendente al giallo], appena sotto il logo di Crealogix. 
+A sinistra della valigia un piatto di portata [porcellana bianca] con frutta assortita [mele, pere, banane, uva chiara] vicino ad una macchinetta del caffè.
+Sul lato opposto una grande cassa [rossa] di bottiglie di Coca Cola.
