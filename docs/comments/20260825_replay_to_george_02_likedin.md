@@ -1,0 +1,4 @@
+George, I understand your intentions, and I think your work is valuable. I also admire your enthusiasm. What concerns me, however, is that you refer to an authentication procedure written by an AI agent and describe it as absolutely secure.
+That is not true even if the procedure were implemented from scratch, without external libraries, by the best specialist available on the market.
+There are good examples of assisted implementation that are less risky and still serve your purpose. That was the real point I wanted to raise.
+As far as I am concerned, the role of the software engineer may even disappear, provided that whoever replaces it understands what they are doing.
