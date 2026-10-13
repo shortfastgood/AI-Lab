@@ -7,6 +7,7 @@ Setting up AI tools requires careful consideration of the environment and projec
 I have decided to prioritise the use of local models and to keep the use of models from online providers to the bare minimum.
 Independence and discretion must take priority; speed and completeness of the result matter only if the work done locally is severely limited or of poor quality.
 
+- [Engines](#engines)
 - [Scripts](#scripts)
   - [Environment](#environment)
 - [Tools](#tools)
@@ -15,6 +16,24 @@ Independence and discretion must take priority; speed and completeness of the re
   - [MLXGen](../tools/mlxgen.md)
   - [NodeJS](#nodejs)
   - [Python](#python)
+
+## Engines
+
+### Ollama
+
+[Ollama](https://ollama.com) is my first choice, already integrated in Claude Code, Codex and GitHub Copilot. Good overall performance. Large choice of local models. Based on Llama.cpp and MLX framework. [Open source available on GitHub](https://github.com/ollama/ollama), is backed up by a commercial organization with the same name. Solid contributors community, is also present on Discord. 
+
+### oMLX
+
+[oMLX](https://omlx.ai) is a good alternative to Ollama, good overall performance, large choice of models and based on the MLX framework. Additional good WEB interface for administration, statistics and monitoring. [Open Source available on GitHub](https://github.com/jundot/omlx). Solid contributors community.
+
+### Slotstream
+
+Slotstream has an interesting approach that uses the disk as memory extension. It is tailored for the model Qwen3.8-Flash-Next. Allows the run of oversized models maintaining a generation performance sligtly over 20 tok/s, enough for local development. Slotstream is a native implementation based on Apple's MLX and Metal. Is Ollama, OpenAI and Anthropic compatible. I use Slotstream as alternative to Ollama for comparisons. [Open Source available on GitHub](https://github.com/carloslfu/slotstream).
+
+### Splash
+
+
 
 ## Scripts
 
