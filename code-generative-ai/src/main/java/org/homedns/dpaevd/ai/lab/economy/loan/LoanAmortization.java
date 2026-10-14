@@ -29,6 +29,8 @@ public class LoanAmortization {
         System.out.println("Enter the loan term (in years): ");
         int loanTermYears = scanner.nextInt();
 
+        scanner.close();
+
         double monthlyPayment = calculateMonthlyPayment(principal, annualInterestRate, loanTermYears);
 
         System.out.printf("The fixed monthly payment is: $%.2f%n", monthlyPayment);
