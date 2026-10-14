@@ -1,0 +1,4 @@
+interface:
+  display_name: "ASD-STE100 Issue 9"
+  short_description: "Write and review Simplified Technical English"
+  default_prompt: "Use $asd-ste100 to revise or review this technical text against ASD-STE100 Issue 9."
