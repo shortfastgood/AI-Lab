@@ -27,3 +27,12 @@ Assessing local models, consequently, has ceased to be a matter of pure technica
 This repository operates on two levels simultaneously: as a chronological record of the shift described above, and as a working handbook for teams integrating AI-augmented workflows. It examines advantages, obstacles, and strategic dimensions, while offering concrete examples and pragmatic direction for embedding AI agents within development pipelines.
 
 The inquiry has moved past *whether* AI will reshape software development. The live question now concerns the speed at which organisations can restructure themselves to harness these capabilities while containing the attendant risks. This repository chronicles that unfolding transformation.
+
+## European Providers
+
+- [Kolibri](https://aleph-alpha.com/en/)
+  - [Kolibri Just Appeared, Giving Europe Another Sovereign AI Option](https://medium.com/the-ai-brief/kolibri-gives-europe-another-sovereign-ai-option-2056e9e206d5)
+- [Holo4](https://hcompany.ai/newsroom/holo4)
+  - [Europe Has Another AI Alternative: Meet Holo4](https://medium.com/the-ai-brief/europe-has-another-ai-alternative-meet-holo4-47e264f00658)
+- [Mistral](https://mistral.ai)
+  - [Finally, Mistral Shows What It Can Build: Meet Large 4](https://medium.com/the-ai-brief/finally-mistral-shows-what-it-can-build-meet-large-4-7558618d8254)
