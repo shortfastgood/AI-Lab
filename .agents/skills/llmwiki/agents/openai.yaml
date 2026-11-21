@@ -1,0 +1,3 @@
+interface:
+  display_name: "LLMWiki"
+  short_description: "Maintain portable product wikis in OKF format"
