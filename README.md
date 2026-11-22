@@ -7,6 +7,7 @@
 - [Technology Adoption Risk](./docs/notes/technology_adoption_risks.md)
 - [Experiences and Outcomes](./docs/notes/experiences_and_outcomes.md)
    - [One Prompt Application Project](https://github.com/shortfastgood/one-prompt-apps)
+   - [One Prompt Documentation Project](https://github.com/shortfastgood/one-prompt-doc)
 - [AI and Tools](./docs/notes/ai_and_tools.md)
 - [Engineering](./docs/notes/engineering.md)
 
