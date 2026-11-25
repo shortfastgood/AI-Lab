@@ -18,4 +18,6 @@ The product overview prioritizes:
 ## Concepts
 
 * [Design Tokens and Architecture](design-tokens-and-architecture.md) - Design token organization and Cascade Layer precedence for maintainable pure-CSS pages.
+* [Responsive Table Architecture](tables-architecture.md) - Static, table-specific Container Query profiles with AI-assisted authoring.
+* [Responsive Table Specifications](tables-specs.md) - Requirements for predefined profiles, table-specific layouts, filtering, and paging.
 
