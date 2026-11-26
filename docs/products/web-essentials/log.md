@@ -1,5 +1,10 @@
 # Product Update Log
 
+## 2026-11-26
+* **Added sidebar pattern**: Added the `Collapsible Sidebar via :has()` chapter to [Design Tokens and Architecture](design-tokens-and-architecture.md).
+* **Documented reset layer**: Added the second chapter to [Design Tokens and Architecture](design-tokens-and-architecture.md), explaining each Small Tracks reset rule and why the initialization is deliberately limited.
+* **Documented layer initialization**: Added a first chapter to [Design Tokens and Architecture](design-tokens-and-architecture.md) describing the Small Tracks Cascade Layer order and the reasons for its DOM-ready JavaScript initialization.
+
 ## 2026-11-25
 * **Added table generation contract**: Added authoring-time column configuration JSON and an AI prompt template to [Responsive Table Architecture](tables-architecture.md) and [Responsive Table Specifications](tables-specs.md). Runtime code does not interpret the configuration, and static profiles retain fluid CSS behavior.
 * **Revised responsive table model**: Replaced generic automatic column collapse with static, table-specific Container Query profiles in [Responsive Table Architecture](tables-architecture.md) and [Responsive Table Specifications](tables-specs.md). Defined a three-profile draft baseline and separated reusable behavior from AI-assisted per-table authoring.
