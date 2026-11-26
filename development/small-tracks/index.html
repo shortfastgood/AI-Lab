@@ -61,6 +61,7 @@
         --shadow-sm: 0 1px 2px rgb(24 34 24 / 0.06);
         --shadow-md: 0 14px 35px rgb(35 55 35 / 0.08);
         --sidebar-width: 17rem;
+        --sidebar-collapsed-width: 5rem;
         --header-height: 5rem;
         --transition-speed: 180ms;
       }
@@ -94,6 +95,26 @@
           "sidebar main" 1fr
           / var(--sidebar-width) minmax(0, 1fr);
         min-height: 100vh;
+        transition: grid-template-columns var(--transition-speed) ease;
+      }
+
+      .app-shell:has(.sidebar-toggle:checked) {
+        grid-template-columns: var(--sidebar-collapsed-width) minmax(0, 1fr);
+      }
+
+      .app-shell:has(.sidebar-toggle:checked) .brand-copy,
+      .app-shell:has(.sidebar-toggle:checked) .nav-label,
+      .app-shell:has(.sidebar-toggle:checked) .sidebar-note {
+        display: none;
+      }
+
+      .app-shell:has(.sidebar-toggle:checked) .app-sidebar {
+        padding-inline: var(--space-sm);
+      }
+
+      .app-shell:has(.sidebar-toggle:checked) .brand,
+      .app-shell:has(.sidebar-toggle:checked) .nav-item {
+        justify-content: center;
       }
 
       .app-sidebar {
@@ -156,7 +177,8 @@
       }
 
       @media (max-width: 47rem) {
-        .app-shell {
+        .app-shell,
+        .app-shell:has(.sidebar-toggle:checked) {
           grid-template:
             "header" auto
             "sidebar" auto
@@ -181,8 +203,22 @@
           min-height: var(--header-height);
         }
 
+        .sidebar-toggle {
+          display: none;
+        }
+
         .brand {
           margin-bottom: var(--space-md);
+        }
+
+        .app-shell:has(.sidebar-toggle:checked) .brand,
+        .app-shell:has(.sidebar-toggle:checked) .nav-item {
+          justify-content: flex-start;
+        }
+
+        .app-shell:has(.sidebar-toggle:checked) .brand-copy,
+        .app-shell:has(.sidebar-toggle:checked) .nav-label {
+          display: block;
         }
 
         .nav-menu {
@@ -318,6 +354,57 @@
       .header-title {
         font-size: clamp(1.05rem, 2vw, 1.3rem);
         letter-spacing: -0.02em;
+      }
+
+      .header-heading {
+        display: flex;
+        align-items: center;
+        gap: var(--space-md);
+        min-width: 0;
+      }
+
+      .sidebar-toggle {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+      }
+
+      .sidebar-toggle-control {
+        display: grid;
+        width: 2.5rem;
+        height: 2.5rem;
+        flex-shrink: 0;
+        place-items: center;
+        padding: 0;
+        background: var(--color-bg-surface);
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-sm);
+        box-shadow: var(--shadow-sm);
+        color: var(--color-text-secondary);
+        cursor: pointer;
+        transition:
+          background var(--transition-speed) ease,
+          color var(--transition-speed) ease,
+          transform var(--transition-speed) ease;
+      }
+
+      .sidebar-toggle-control:hover {
+        background: var(--color-bg-subtle);
+        color: var(--color-text-primary);
+        transform: translateY(-1px);
+      }
+
+      .sidebar-toggle:focus-visible + .sidebar-toggle-control {
+        outline: 3px solid rgb(40 116 66 / 0.35);
+        outline-offset: 3px;
+      }
+
+      .sidebar-toggle-control svg {
+        width: 1.2rem;
+        height: 1.2rem;
       }
 
       .header-meta {
@@ -612,6 +699,11 @@
       }
 
       @media (max-width: 47rem) {
+        .sidebar-toggle,
+        .sidebar-toggle-control {
+          display: none;
+        }
+
         .welcome-row {
           align-items: stretch;
           flex-direction: column;
@@ -651,7 +743,7 @@
 </head>
 <body>
   <div class="app-shell">
-    <aside class="app-sidebar">
+    <aside class="app-sidebar" id="app-sidebar">
       <a class="brand" href="#tracks" aria-label="Small Tracks dashboard">
         <span class="brand-mark" aria-hidden="true">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -665,23 +757,23 @@
       </a>
 
       <nav class="nav-menu" aria-label="Main navigation">
-        <a class="nav-item" href="#tracks" data-section="tracks" aria-current="page">
+        <a class="nav-item" href="#tracks" data-section="tracks" aria-label="Tracks" aria-current="page">
           <span class="nav-icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
               <path d="M5 3v18M19 3v18M5 7h14M5 17h14M3 3h4M17 3h4M3 21h4M17 21h4"/>
             </svg>
           </span>
-          <span>Tracks</span>
+          <span class="nav-label">Tracks</span>
         </a>
-        <a class="nav-item" href="#track-plans" data-section="track-plans">
+        <a class="nav-item" href="#track-plans" data-section="track-plans" aria-label="Tracks' Plans">
           <span class="nav-icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
               <path d="M4 3h6v6H4zM14 15h6v6h-6zM7 9v5a4 4 0 0 0 4 4h3M14 6h6M17 3v6"/>
             </svg>
           </span>
-          <span>Tracks' Plans</span>
+          <span class="nav-label">Tracks' Plans</span>
         </a>
-        <a class="nav-item" href="#trains" data-section="trains">
+        <a class="nav-item" href="#trains" data-section="trains" aria-label="Trains">
           <span class="nav-icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
               <path d="M6 3h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zM4 11h16M8 3v8M16 3v8M7 19l-2 3M17 19l2 3"/>
@@ -689,16 +781,16 @@
               <circle cx="16" cy="15" r="1" fill="currentColor" stroke="none"/>
             </svg>
           </span>
-          <span>Trains</span>
+          <span class="nav-label">Trains</span>
         </a>
-        <a class="nav-item" href="#settings" data-section="settings">
+        <a class="nav-item" href="#settings" data-section="settings" aria-label="Settings">
           <span class="nav-icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
               <circle cx="12" cy="12" r="3"/>
               <path d="M19.4 15a1.7 1.7 0 0 0 .34 1.88l.06.06-1.42 2.46-.09-.02a1.7 1.7 0 0 0-1.8.6l-1.38 0a1.7 1.7 0 0 0-1.44 1.02l-.08.17h-3.18l-.08-.17A1.7 1.7 0 0 0 8.9 20l-1.38 0a1.7 1.7 0 0 0-1.8-.6l-.09.02-1.42-2.46.06-.06A1.7 1.7 0 0 0 4.6 15l-1.38-.7V11l1.38-.7a1.7 1.7 0 0 0 .34-1.88l-.06-.06 1.42-2.46.09.02a1.7 1.7 0 0 0 1.8-.6l1.38-.7a1.7 1.7 0 0 0 1.44-1.02l.08-.17h3.18l.08.17A1.7 1.7 0 0 0 15.1 4.62l1.38.7a1.7 1.7 0 0 0 1.8.6l.09-.02 1.42 2.46-.06.06a1.7 1.7 0 0 0-.34 1.88l1.38.7v3.3z"/>
             </svg>
           </span>
-          <span>Settings</span>
+          <span class="nav-label">Settings</span>
         </a>
       </nav>
 
@@ -709,7 +801,21 @@
     </aside>
 
     <header class="app-header">
-      <h1 class="header-title" id="page-title">Tracks dashboard</h1>
+      <div class="header-heading">
+        <input
+          class="sidebar-toggle"
+          id="sidebar-toggle"
+          type="checkbox"
+          aria-label="Toggle navigation"
+          aria-controls="app-sidebar"
+        >
+        <label class="sidebar-toggle-control" for="sidebar-toggle" title="Toggle navigation">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+            <path d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </label>
+        <h1 class="header-title" id="page-title">Tracks dashboard</h1>
+      </div>
       <div class="header-meta">
         <span class="system-status">
           <span class="status-dot" aria-hidden="true"></span>
